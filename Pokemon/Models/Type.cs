@@ -3,12 +3,10 @@ using Dapper.Contrib.Extensions;
 
 namespace Pokemon
 {
-    [Table("team")]
-    public class Team
+    public class Type
     {
-        [Key]
         public int id { get; set; }
         public string name { get; set; }
-        public int trainer_id { get; set; } 
+        public List<TypeRelation> damage_relations { get; set; }
     }
 }
