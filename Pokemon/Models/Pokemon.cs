@@ -17,7 +17,7 @@ namespace Pokemon
         public PokemonSprites sprites { get; set; }
 
         // may be nested - separate from species call in pokemon resource
-        public PokemonSpecies species { get; set; }
+        public SpeciesName species { get; set; }
         public List<Stats> stats { get; set; }
         public List<Type> types { get; set; }
         
