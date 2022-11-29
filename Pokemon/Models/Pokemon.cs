@@ -15,6 +15,8 @@ namespace Pokemon
         public int weight { get; set; }
         public List<Move> moves { get; set; }
         public PokemonSprites sprites { get; set; }
+
+        // may be nested - separate from species call in pokemon resource
         public PokemonSpecies species { get; set; }
         public List<Stats> stats { get; set; }
         public List<Type> types { get; set; }
