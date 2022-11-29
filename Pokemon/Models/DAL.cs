@@ -35,7 +35,6 @@ namespace Pokemon
 
          */
 
-
         public static async Task<Pokemon> GetPokemon(int id)
         {
             HttpClient client = new HttpClient();
