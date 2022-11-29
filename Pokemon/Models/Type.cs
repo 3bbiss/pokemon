@@ -5,8 +5,7 @@ namespace Pokemon
 {
     public class Type
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public List<TypeRelation> damage_relations { get; set; }
+       public int slot { get; set; }
+       public TypeName type { get; set; } 
     }
 }

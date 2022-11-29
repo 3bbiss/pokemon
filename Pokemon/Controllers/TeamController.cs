@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
+using Dapper.Contrib.Extensions;
 
 namespace Pokemon.Controllers
 {
@@ -8,15 +10,15 @@ namespace Pokemon.Controllers
     public class TeamController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Team> GetAll()
+        public async Task<IEnumerable<TeamDisplay>> GetAll()
         {
-            return DAL.GetAllTeams();
+            return await DAL.GetAllTeams();
         }
 
         [HttpPost]
-        public Team Add(Team team)
+        public void Add(TeamDisplay team)
         {
-            return DAL.AddTeam(team);
+            DAL.AddTeam(team);
         }
 
         [HttpDelete("{id}")]
@@ -24,9 +26,9 @@ namespace Pokemon.Controllers
         {
             DAL.DeleteTeam(id);
         }
-
+       
         [HttpPut]
-        public void Update(Team team)
+        public void Update(TeamDisplay team)
         {
             DAL.UpdateTeam(team);
         }
