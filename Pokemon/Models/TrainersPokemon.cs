@@ -15,7 +15,7 @@ namespace Pokemon
         public PokemonSprites pokemon_pics {get; set; }
         public int height { get; set; }
         public int weight { get; set; }
-        public List<string> type { get; set; }
+        public List<string> type { get; set; } = new List<string>();
         public int hp { get; set; }
     }
 }

@@ -45,6 +45,15 @@ namespace Pokemon
             return response;
         }
 
+        public static async Task<List<Pokemon>> GetAllPokemon()
+        {
+            HttpClient client = new HttpClient();
+            var pokeRequest = await client.GetAsync($"https://pokeapi.co/api/v2/pokemon/?limit=150");
+            List<Pokemon> response = await pokeRequest.Content.ReadAsAsync<List<Pokemon>>();
+
+            return response;
+        }
+
         public static async Task<List<TeamDisplay>> GetAllTeams()  //DB Team
         {
             List<Team> teams = DB.GetAll<Team>().ToList();
@@ -77,7 +86,7 @@ namespace Pokemon
                     }
 
                     trainersPokemon.hp = pokemon.stats.First(x => x.stat.name == "hp").base_stat;
-                    trainersPokemon.move_name = pokemon.moves.First(x => x.id == pt.move_id).name;
+                    trainersPokemon.move_name = pokemon.moves.First(x => x.move.GetId() == pt.move_id).move.name;
 
                     trainersPokemons.Add(trainersPokemon);
                 }
@@ -113,7 +122,7 @@ namespace Pokemon
                 }
 
                 trainersPokemon.hp = pokemon.stats.First(x => x.stat.name == "hp").base_stat;
-                trainersPokemon.move_name = pokemon.moves.First(x => x.id == pt.move_id).name;
+                trainersPokemon.move_name = pokemon.moves.First(x => x.move.GetId() == pt.move_id).move.name;
 
                 trainersPokemons.Add(trainersPokemon);
             }
@@ -154,7 +163,7 @@ namespace Pokemon
                     }
 
                     trainersPokemon.hp = pokemon.stats.First(x => x.stat.name == "hp").base_stat;
-                    trainersPokemon.move_name = pokemon.moves.First(x => x.id == pt.move_id).name;
+                    trainersPokemon.move_name = pokemon.moves.First(x => x.move.GetId() == pt.move_id).move.name;
 
                     trainersPokemons.Add(trainersPokemon);
                 }

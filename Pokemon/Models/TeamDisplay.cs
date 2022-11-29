@@ -17,6 +17,8 @@ namespace Pokemon
         // and move object has an id per move
         public List<TrainersPokemon> pokemon { get; set; }
 
+        public TeamDisplay() { }
+
         // remove trainer? no, need for name
         // remove pokemonteam from constructor as it's not being used and we will reference it later
         public TeamDisplay(Team team, List<TrainersPokemon> pokemon, Trainer trainer)
