@@ -8,6 +8,9 @@ namespace Pokemon
     {
         // hola
         public static MySqlConnection DB;
+        public static string CS; // Connection String
+
+
         // Do we want to do this the new way Jeff showed us during Flex week? E.g... opening and closing
         // the MySqlConnection properly each time we use it to avoid those annoying errors.
 
@@ -62,31 +65,31 @@ namespace Pokemon
 
         // TRAINER Static CRUD Operations (OLD WAY)
 
-        public static IEnumerable<Trainer> GetAllTrainers()
-        {
-            return DB.GetAll<Trainer>();
-        }
+        //public static IEnumerable<Trainer> GetAllTrainers()
+        //{
+        //    return DB.GetAll<Trainer>();
+        //}
 
-        public static Trainer GetTrainer(int id)
-        {
-            return DB.Get<Trainer>(id);
-        }
+        //public static Trainer GetTrainer(int id)
+        //{
+        //    return DB.Get<Trainer>(id);
+        //}
 
-        public static Trainer AddTrainer(Trainer trainer)
-        {
-            DB.Insert(trainer);
-            return trainer;
-        }
+        //public static Trainer AddTrainer(Trainer trainer)
+        //{
+        //    DB.Insert(trainer);
+        //    return trainer;
+        //}
 
-        public static void Update(Trainer trainer)
-        {
-            DB.Update(trainer);
-        }
+        //public static void Update(Trainer trainer)
+        //{
+        //    DB.Update(trainer);
+        //}
 
-        public static void Delete(int id)
-        {
-            DB.Delete(new Trainer { id = id });
-        }
+        //public static void Delete(int id)
+        //{
+        //    DB.Delete(new Trainer { id = id });
+        //}
 
 
     }

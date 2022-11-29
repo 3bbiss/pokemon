@@ -10,31 +10,31 @@ namespace Pokemon.Controllers
         [HttpGet]
         public IEnumerable<Trainer> GetAllTrainers()
         {
-            return DAL.GetAllTrainers();
+            return Trainer.GetAllTrainers();
         }
 
         [HttpGet("{id}")]
         public Trainer GetTrainer(int id)
         {
-            return DAL.GetTrainer(id);
+            return Trainer.GetTrainer(id);
         }
 
         [HttpPost]
         public Trainer AddTrainer(Trainer trainer)
         {
-            return DAL.AddTrainer(trainer);
+            return Trainer.AddTrainer(trainer);
         }
 
         [HttpDelete("{id}")]
         public void DeleteTrainer(int id)
         {
-            DAL.Delete(id);
+            Trainer.DeleteTrainer(id);
         }
 
         [HttpPut]
         public void Update(Trainer trainer)
         {
-            DAL.Update(trainer);
+            Trainer.UpdateTrainer(trainer);
         }
     }
 }
