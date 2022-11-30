@@ -47,12 +47,16 @@ namespace Pokemon
             db.Close();
         }
 
-        public static void DeleteTrainer(int id)
+        public async static Task DeleteTrainer(int id)
         {
             MySqlConnection db = new MySqlConnection(DAL.CS);
             db.Open();
             Trainer trainer = new Trainer();
             trainer.id = id;
+
+            // deleting the trainer's teams before deleting the trainer.
+            await TeamDisplay.DeleteTrainerTeams(id);
+
             db.Delete<Trainer>(trainer);
             db.Close();
         }

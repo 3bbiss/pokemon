@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using Dapper.Contrib.Extensions;
+using System.Runtime.CompilerServices;
 
 namespace Pokemon
 {
@@ -197,6 +198,49 @@ namespace Pokemon
 
             DB.Close();
         }
+
+
+
+        // NOT currently referencing this function anywhere. Do we need to keep the old one too (above)?
+        // because it's being reference in TeamController.cs
+
+        // Do we want 2 different delete() functions?
+        // One where they're just deleting a team, and one where the team is
+        // being deleted because they're deleting a trainer..
+
+        // My thinking for the flow below...
+            // For each pokemon... in each team... in list of trainer's teams
+                // delete each pokemon
+                // then, delete each team
+
+
+        public static async Task DeleteTrainerTeams(int trainer_id)
+        {
+            MySqlConnection DB = new MySqlConnection(DAL.CS);
+            DB.Open();
+
+            Trainer trainer = new Trainer() { id = trainer_id};
+            
+            List<TeamDisplay> teams = await GetAllTeamsbyTrainer(trainer_id);
+
+            foreach (TeamDisplay trainerTeam in teams)
+            {
+                TeamDisplay.DeleteTeam(trainerTeam.team_id);
+
+                //foreach (TrainersPokemon pokemon in trainerTeam.pokemon)
+                //{
+
+                //    //DB.Delete<TrainersPokemon>(pokemon);
+                //}
+
+                //DB.Delete(new PokemonTeam { team_id = trainerTeam.team_id });
+                
+            }
+
+            DB.Close();
+
+        }
+
 
 
         public static void UpdateTeam(TeamDisplay team) //DB Team
