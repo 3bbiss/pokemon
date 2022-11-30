@@ -12,25 +12,26 @@ namespace Pokemon.Controllers
         [HttpGet]
         public async Task<IEnumerable<TeamDisplay>> GetAll()
         {
-            return await DAL.GetAllTeams();
+            return await TeamDisplay.GetAllTeams();
         }
 
         [HttpPost]
         public void Add(TeamDisplay team)
         {
-            DAL.AddTeam(team);
+            TeamDisplay.AddTeam(team);
         }
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            DAL.DeleteTeam(id);
+            TeamDisplay.DeleteTeam(id);
         }
        
         [HttpPut]
         public void Update(TeamDisplay team)
         {
-            DAL.UpdateTeam(team);
+            TeamDisplay.UpdateTeam(team);
         }
+
     }
 }

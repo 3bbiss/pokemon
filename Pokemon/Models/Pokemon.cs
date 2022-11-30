@@ -20,6 +20,30 @@ namespace Pokemon
         public SpeciesName species { get; set; }
         public List<Stats> stats { get; set; }
         public List<Type> types { get; set; }
-        
+
+
+
+
+        public static async Task<Pokemon> GetPokemon(int id)
+        {
+            HttpClient client = new HttpClient();
+            var pokeRequest = await client.GetAsync($"https://pokeapi.co/api/v2/pokemon/{id}");
+            Pokemon response = await pokeRequest.Content.ReadAsAsync<Pokemon>();
+
+            return response;
+        }
+
+
+
+        public static async Task<List<Pokemon>> GetAllPokemon()
+        {
+            HttpClient client = new HttpClient();
+            var pokeRequest = await client.GetAsync($"https://pokeapi.co/api/v2/pokemon/?limit=150");
+            List<Pokemon> response = await pokeRequest.Content.ReadAsAsync<List<Pokemon>>();
+
+            return response;
+        }
+
+
     }
 }
