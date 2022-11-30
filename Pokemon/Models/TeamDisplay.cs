@@ -7,17 +7,12 @@ namespace Pokemon
     public class TeamDisplay
     {
         public int team_id { get; set; }
-        public string team_name { get; set; }
-        
+        public string team_name { get; set; } 
         public int trainer_id { get; set; }
-        
         public string trainer_name { get; set; }
-        
         public List<TrainersPokemon> pokemon { get; set; }
-
         public TeamDisplay() { }
 
-        
         public TeamDisplay(Team team, List<TrainersPokemon> pokemon, Trainer trainer)
         {
             
@@ -29,7 +24,6 @@ namespace Pokemon
             
             this.pokemon = pokemon;
         }
-
 
         public static async Task<List<TeamDisplay>> GetAllTeams()  //DB Team
         {
@@ -77,8 +71,6 @@ namespace Pokemon
             return teamDisplays;
         }
 
-
-
         public static async Task<TeamDisplay> GetOneTeam(int team_id)  //DB Team
         {
             MySqlConnection DB = new MySqlConnection(DAL.CS);
@@ -116,7 +108,6 @@ namespace Pokemon
             DB.Close();
             return teamDisplay;
         }
-
 
         public static async Task<List<TeamDisplay>> GetAllTeamsbyTrainer(int trainer_id)  //DB Team
         {
@@ -187,7 +178,6 @@ namespace Pokemon
             DB.Close();
         }
 
-
         public static void DeleteTeam(int id) //DB Team
         {
             MySqlConnection DB = new MySqlConnection(DAL.CS);
@@ -240,7 +230,6 @@ namespace Pokemon
             DB.Close();
 
         }
-
 
 
         public static void UpdateTeam(TeamDisplay team) //DB Team
