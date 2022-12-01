@@ -11,7 +11,7 @@ namespace Pokemon
         public int trainer_id { get; set; }
         public string trainer_name { get; set; }
         public List<TrainersPokemon> pokemon { get; set; }
-        public TeamDisplay() { }
+        public TeamDisplay() { }  // AA 12/1/2022 10:45 -- Do we need this empty constructor? 
 
         public TeamDisplay(Team team, List<TrainersPokemon> pokemon, Trainer trainer)
         {
