@@ -1,0 +1,34 @@
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Trainer } from '../trainer';
+import { TrainerService } from '../trainer.service';
+
+@Component({
+  selector: 'app-add-trainer',
+  templateUrl: './add-trainer.component.html',
+  styleUrls: ['./add-trainer.component.css']
+})
+export class AddTrainerComponent implements OnInit {
+  
+  TheTrainers: Trainer[] = [];
+
+  newTrainer: Trainer = {id: 0, name: '', email: ''};
+
+  @Output() save: EventEmitter<Trainer> = new EventEmitter<Trainer>();
+
+  saveTrainer(){
+    this.save.emit(this.newTrainer);
+  }
+
+
+  constructor(private TrainerSrv: TrainerService) {
+    TrainerSrv.getAllTrainers(
+      (result: Trainer[]) => {
+        this.TheTrainers = result;
+      }
+    );
+   }
+
+  ngOnInit(): void {
+  }
+
+}

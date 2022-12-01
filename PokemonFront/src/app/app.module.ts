@@ -9,7 +9,8 @@ import { TeamListComponent } from './team-list/team-list.component';
 import { AddTeamComponent } from './add-team/add-team.component';
 
 import { TrainerDetailComponent } from './trainer-detail/trainer-detail.component';
-import { TrainerListComponent } from './trainer-list/trainer-list.component'; 
+import { TrainerListComponent } from './trainer-list/trainer-list.component';
+import { AddTrainerComponent } from './add-trainer/add-trainer.component'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TrainerListComponent } from './trainer-list/trainer-list.component';
     TrainerDetailComponent,
     TrainerListComponent,
     TeamListComponent,
-    AddTeamComponent
+    AddTeamComponent,
+    AddTrainerComponent
 
   ],
   imports: [

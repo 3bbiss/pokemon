@@ -1,10 +1,16 @@
-<p>List of Trainers</p>
-
-
 <div>
-    <ng-container *ngFor="let trainer of trainerList">
-        Trainer: {{trainer.name}} <br/>
-        Email: {{trainer.email}} <br/>
-        ID: {{trainer.id}} <br/> <br/>
-    </ng-container>
+    <app-add-trainer (save)="save($event)"></app-add-trainer>
+
+    <p>List of Trainers</p>
+
+
+    <div>
+        <ng-container *ngFor="let trainer of trainerList">
+            Trainer: {{trainer.name}} <br/>
+            Email: {{trainer.email}} <br/>
+            ID: {{trainer.id}} <br/> <br/>
+        </ng-container>
+    </div>
+
+
 </div>

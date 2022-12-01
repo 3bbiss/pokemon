@@ -23,6 +23,17 @@ export class TrainerListComponent implements OnInit {
     )
   }
 
+  save(trainer: Trainer){
+    this.TrainerSrv.addTrainer(
+
+      (result: Trainer) => {
+        this.refresh();
+      },
+      trainer
+
+    );
+  }
+
   ngOnInit(): void {
   }
 
