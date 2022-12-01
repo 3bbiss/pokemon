@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let team of teamList">
+        Trainer: {{ team.trainer_name }} <br>
+        Team: {{ team.team_name }} 
+        <div *ngFor="let pokemon of team.pokemon">
+            Pokemon: {{ pokemon.pokemon_name }} <br>
+        </div>
+        <br>
+    </div>
+</div>
