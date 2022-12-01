@@ -17,6 +17,8 @@ export class AddTrainerComponent implements OnInit {
 
   saveTrainer(){
     this.save.emit(this.newTrainer);
+    this.newTrainer.name = ''; // to clear out name field after saving
+    this.newTrainer.email = ''; // to clear out email field after saving
   }
 
 
