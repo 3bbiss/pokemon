@@ -3,14 +3,12 @@
 
     <p>List of Trainers</p>
 
-
     <div>
         <ng-container *ngFor="let trainer of trainerList">
-            Trainer: {{trainer.name}} <br/>
-            Email: {{trainer.email}} <br/>
-            ID: {{trainer.id}} <br/> <br/>
+            <app-trainer-detail
+            [trainer]="trainer" (delete)="deleteOne($event)"
+            ></app-trainer-detail>
         </ng-container>
     </div>
-
 
 </div>

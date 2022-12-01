@@ -34,6 +34,16 @@ export class TrainerListComponent implements OnInit {
     );
   }
 
+  deleteOne(id: number){
+    this.TrainerSrv.deleteTrainer(
+      () => {
+        this.refresh();
+      },
+      id
+    );
+  }
+
+
   ngOnInit(): void {
   }
 

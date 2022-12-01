@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Trainer } from '../trainer';
 import { TrainerService } from '../trainer.service';
 
@@ -8,6 +8,14 @@ import { TrainerService } from '../trainer.service';
   styleUrls: ['./trainer-detail.component.css']
 })
 export class TrainerDetailComponent implements OnInit {
+
+  @Input() trainer: Trainer = {id: 0, name: '', email: ''};
+
+  @Output() delete: EventEmitter<number> = new EventEmitter<number>();
+
+  deleteMe(){
+    this.delete.emit(this.trainer.id);
+  }
 
   constructor() { }
 
