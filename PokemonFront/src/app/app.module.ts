@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TeamListComponent } from './team-list/team-list.component';
+import { AddTeamComponent } from './add-team/add-team.component';
 
-import { HttpClientModule } from '@angular/common/http';
 import { TrainerDetailComponent } from './trainer-detail/trainer-detail.component';
 import { TrainerListComponent } from './trainer-list/trainer-list.component'; 
 
@@ -13,7 +15,10 @@ import { TrainerListComponent } from './trainer-list/trainer-list.component';
   declarations: [
     AppComponent,
     TrainerDetailComponent,
-    TrainerListComponent
+    TrainerListComponent,
+    TeamListComponent,
+    AddTeamComponent
+
   ],
   imports: [
     BrowserModule,
