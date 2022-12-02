@@ -1,0 +1,53 @@
+.font {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.bubble {
+    background-color: rgb(206, 224, 252);
+    outline-offset: 5px;
+    border: 4px solid white;
+    border-color: black;
+    border-radius: 10px;
+    margin: 60px;
+}
+
+
+
+ul {
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    columns: 6;
+}
+
+li {
+    display: inline;
+    vertical-align: top;
+}
+
+.pokeball {
+    background: url(..\Images\pokeballsmall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+
+/* display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "col1-item1 col2-item1 col3-item1"
+    "col1-item2 col2-item2 col3-item2"
+    "col1-item3 col2-item3 col3-item3"
+    "col1-item4 col2-item3 col3-item4";  */
