@@ -9,9 +9,13 @@ namespace Pokemon
         public int team_id { get; set; }
         public string team_name { get; set; } 
         public int trainer_id { get; set; }
-        public string trainer_name { get; set; }
+        public string? trainer_name { get; set; }
         public List<TrainersPokemon> pokemon { get; set; }
-        public TeamDisplay() { }  // AA 12/1/2022 10:45 -- Do we need this empty constructor? 
+        public TeamDisplay() { }  // AA 12/1/2022 10:45 -- Do we need this empty constructor?
+                                  // BH 12/1 7:51pm - yis, since we have the constructor below to easily populate within c#
+                                  // the default for c# classes/models has an empty constructor - but since we have one, it would be
+                                  // unable to deserialize the json we get back
+                                  // example: https://github.com/neuecc/MessagePack-CSharp/issues/1449
 
         public TeamDisplay(Team team, List<TrainersPokemon> pokemon, Trainer trainer)
         {
@@ -60,7 +64,7 @@ namespace Pokemon
                     }
 
                     trainersPokemon.hp = pokemon.stats.First(x => x.stat.name == "hp").base_stat;
-                    trainersPokemon.move_name = pokemon.moves.First(x => x.move.GetId() == pt.move_id).move.name;
+                    trainersPokemon.move_name = pokemon.moves.FirstOrDefault(x => x.move.GetId() == pt.move_id)?.move?.name ?? "";
 
                     trainersPokemons.Add(trainersPokemon);
                 }

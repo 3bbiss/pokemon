@@ -1,0 +1,6 @@
+<div>
+    <div *ngFor="let pokemon of pokemonList">
+        {{ pokemon.name }}
+        <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
+    </div>
+</div>

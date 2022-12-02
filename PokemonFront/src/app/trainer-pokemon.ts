@@ -10,4 +10,6 @@ export interface TrainerPokemon {
     weight: number,
     type: string[],
     hp: number
+
+    constructor() : void;
 }

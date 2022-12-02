@@ -10,7 +10,10 @@ import { AddTeamComponent } from './add-team/add-team.component';
 
 import { TrainerDetailComponent } from './trainer-detail/trainer-detail.component';
 import { TrainerListComponent } from './trainer-list/trainer-list.component';
+
 import { AddTrainerComponent } from './add-trainer/add-trainer.component'; 
+
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component'; 
 
 @NgModule({
   declarations: [
@@ -19,8 +22,8 @@ import { AddTrainerComponent } from './add-trainer/add-trainer.component';
     TrainerListComponent,
     TeamListComponent,
     AddTeamComponent,
-    AddTrainerComponent
-
+    AddTrainerComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,
