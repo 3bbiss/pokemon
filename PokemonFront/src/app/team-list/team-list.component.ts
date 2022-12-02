@@ -26,4 +26,12 @@ export class TeamListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  save(team: Team){
+    this.TeamSrv.addTeam(
+      (result: Team) => {
+        this.refresh();
+      },
+      team
+    );
+  }
 }

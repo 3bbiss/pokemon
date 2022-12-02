@@ -10,8 +10,10 @@ namespace Pokemon.Controllers
         [Route("pokemon")]
         public async Task<IEnumerable<Pokemon>> GetAll()
         {
+            // changed to 10 for testing
+            // be sure to reset to 150
             List<Pokemon> pokemons = new List<Pokemon>();
-            for(int i = 1; i <= 150; i++)
+            for(int i = 1; i <= 10; i++)
             {
                 pokemons.Add( await Pokemon.GetPokemon(i));
             }

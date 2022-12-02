@@ -1,1 +1,33 @@
-<p>add-team works!</p>
+<div>
+    <h2>Create A New Pokemon Team!</h2>
+    Team Name: <input type="text" [(ngModel)]="newTeam.team_name"/><br/>
+    Trainer: 
+    <select [(ngModel)]="newTeam.trainer_id">
+        <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+    </select>
+    Pokemon 1:
+    <select [(ngModel)]="firstPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
+    </select>
+    Pokemon 2:
+    <select [(ngModel)]="secondPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
+    </select>
+    Pokemon 3:
+    <select [(ngModel)]="thirdPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
+    </select>
+    Pokemon 4:
+    <select [(ngModel)]="fourthPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
+    </select>
+    Pokemon 5:
+    <select [(ngModel)]="fifthPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
+    </select>
+    Pokemon 6:
+    <select [(ngModel)]="sixthPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
+    </select>
+    <button (click)="saveIt()">Save</button>
+</div>
