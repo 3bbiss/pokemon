@@ -1,6 +1,18 @@
 <div>
-    Trainer: {{trainer.name}} <br/>
-    Email: {{trainer.email}} <br/>
-    ID: {{trainer.id}} <br/>
-    <button (click)="deleteMe()">Delete Trainer</button> <br/> <br/>
+
+    <div *ngIf="!editMode">
+        Trainer: {{trainer.name}} <br/>
+        Email: {{trainer.email}} <br/>
+        ID: {{trainer.id}} <br/>
+        <button (click)="goToEdit()">Edit Trainer Info</button>
+        <button (click)="deleteMe()">Delete Trainer</button> <br/> <br/>
+    </div>
+
+    <div *ngIf="editMode">
+        <input type="text" [(ngModel)]="editName"/>
+        <input type="text" [(ngModel)]="editEmail"/>
+        <button (click)="saveEdit()">Save Edits</button>
+        <button (click)="cancelEdit()">Cancel Edits</button>
+    </div>
+
 </div>

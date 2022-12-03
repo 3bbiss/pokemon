@@ -13,8 +13,31 @@ export class TrainerDetailComponent implements OnInit {
 
   @Output() delete: EventEmitter<number> = new EventEmitter<number>();
 
+  @Output() save: EventEmitter<Trainer> = new EventEmitter<Trainer>();
+
   deleteMe(){
     this.delete.emit(this.trainer.id);
+  }
+
+  editMode: boolean = false;
+  editName: string = '';
+  editEmail: string = '';
+
+  goToEdit(){
+    this.editMode = true;
+    this.editName = this.trainer.name;
+    this.editEmail = this.trainer.email;
+  }
+
+  saveEdit(){
+    this.editMode = false;
+    this.trainer.name = this.editName;
+    this.trainer.email = this.editEmail;
+    this.save.emit(this.trainer);
+  }
+
+  cancelEdit(){
+    this.editMode = false;
   }
 
   constructor() { }

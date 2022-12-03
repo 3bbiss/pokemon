@@ -34,6 +34,18 @@ export class TrainerListComponent implements OnInit {
     );
   }
 
+  saveEdit(trainer: Trainer){
+    this.TrainerSrv.updateTrainer(
+
+      (result: Trainer) => {
+        this.refresh();
+      },
+      trainer
+
+    );
+  }
+
+
   deleteOne(id: number){
     this.TrainerSrv.deleteTrainer(
       () => {
