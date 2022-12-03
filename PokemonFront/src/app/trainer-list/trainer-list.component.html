@@ -7,6 +7,7 @@
         <ng-container *ngFor="let trainer of trainerList">
             <app-trainer-detail
             [trainer]="trainer" (delete)="deleteOne($event)"
+            (save)="saveEdit($event)"
             ></app-trainer-detail>
         </ng-container>
     </div>
