@@ -13,7 +13,7 @@ namespace Pokemon.Controllers
             // changed to 10 for testing
             // be sure to reset to 150
             List<Pokemon> pokemons = new List<Pokemon>();
-            for(int i = 1; i <= 10; i++)
+            for(int i = 1; i <= 18; i++)
             {
                 pokemons.Add( await Pokemon.GetPokemon(i));
             }
