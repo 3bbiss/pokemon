@@ -15,6 +15,14 @@ export class TeamByTrainerListComponent implements OnInit {
   trainerList: Trainer[] = []; 
   teamList: Team[] = [];
 
+  team: Team = {
+    team_id: 0, team_name: '', trainer_id: 0,
+    trainer_name: '', pokemon: []
+  };
+
+  viewTeamOn: boolean = false;
+  editMode: boolean = false;
+
 
   constructor(private TrainerSrv: TrainerService, private TeamSrv: TeamService) { 
     TrainerSrv.getAllTrainers(
@@ -35,6 +43,55 @@ export class TeamByTrainerListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  update(team: Team){
+    this.TeamSrv.updateTeam(
+      (result: Team) => {
+        this.GetTrainerTeams(team.trainer_id.toString());
+      },
+      team
+    )
+    this.viewTeamOn = false;
+    this.editMode = false;
+  }
+
+  delete(team: Team){
+    this.TeamSrv.deleteTeam(
+      () => {
+        this.GetTrainerTeams(team.trainer_id.toString());
+      },
+      team.team_id
+    )
+    this.viewTeamOn = false;
+    this.editMode = false;
+  }
+
+  cancel(){
+    this.viewTeamOn = false;
+    this.editMode = false;
+  }
+
+  updateTeamOn(id: number) {
+    this.TeamSrv.getOneTeam(
+      (result: Team) => {
+        this.team = result;
+      },
+
+      id
+    )
+    this.editMode = true;
+  }
+
+  viewTeam(id: number) {
+    this.TeamSrv.getOneTeam(
+      (result: Team) => {
+        this.team = result;
+      },
+
+      id
+    )
+    this.viewTeamOn = true;
   }
 
 }
