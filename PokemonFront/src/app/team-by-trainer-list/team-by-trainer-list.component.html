@@ -1,0 +1,12 @@
+<div>
+<select #trainerSelect (change)="GetTrainerTeams(trainerSelect.value)">
+    <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+</select>
+
+<div *ngFor="let team of teamList">
+    {{ team.team_name }}
+ <div *ngFor="let pokemon of team.pokemon">
+    {{ pokemon.pokemon_name }}
+    <img [src]="pokemon.pokemon_pics.front_default">
+</div>
+</div>
