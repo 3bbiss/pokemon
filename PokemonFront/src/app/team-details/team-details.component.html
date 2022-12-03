@@ -1,0 +1,33 @@
+<div>
+    <h2>Team Detail</h2>
+    Team Name: <input type="text" [(ngModel)]="this.team.team_name" /><br/>
+    Trainer: 
+    <select [(ngModel)]="this.team.trainer_id">
+        <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+    </select>
+    Pokemon 1:
+    <select [(ngModel)]="this.firstPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+    </select>
+    Pokemon 2:
+    <select [(ngModel)]="this.secondPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+    </select>
+    Pokemon 3:
+    <select [(ngModel)]="this.thirdPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+    </select>
+    Pokemon 4:
+    <select [(ngModel)]="this.fourthPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+    </select>
+    Pokemon 5:
+    <select [(ngModel)]="this.fifthPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+    </select>
+    Pokemon 6:
+    <select [(ngModel)]="this.sixthPokemon">
+        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+    </select>
+    <button (click)="updateIt()">Save Changes</button>
+</div>

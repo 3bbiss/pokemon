@@ -18,14 +18,14 @@ namespace Pokemon.Controllers
         }
 
         [HttpGet]
-        [Route("team/{id}")]
+        [Route("team/{team_id}")]
         public async Task<TeamDisplay> Get(int team_id)
         {
             return await TeamDisplay.GetOneTeam(team_id);
         }
 
         [HttpGet]
-        [Route("team/trainer/{id}")]
+        [Route("team/trainer/{trainer_id}")]
         public async Task<IEnumerable<TeamDisplay>> GetAllTrainerTeams(int trainer_id)
         {
             return await TeamDisplay.GetAllTeamsbyTrainer(trainer_id);

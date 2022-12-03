@@ -5,7 +5,7 @@ export interface TrainerPokemon {
     move_id: number,
     pokemon_name: string,
     move_name: string,
-    pokemon_pics: PokemonSprites[],
+    pokemon_pics: PokemonSprites,
     height: number,
     weight: number,
     type: string[],

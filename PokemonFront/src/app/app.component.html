@@ -1,6 +1,14 @@
 
-<h1>Pokemon App</h1>
+<h1>Pokemon Team Builder App</h1>
 
-<app-trainer-list></app-trainer-list>
-<app-team-list></app-team-list>
-<app-pokemon-list></app-pokemon-list>
+<a routerLink="/teams">Pokemon Teams</a>
+&nbsp;&nbsp;
+<a routerLink="/addteam">Pokemon Team Builder</a>
+&nbsp;&nbsp;
+<a routerLink="/trainers">Trainers</a>
+&nbsp;&nbsp;
+<!-- maybe have this be the home page? and force the login/trainer creation?-->
+<a routerLink="/addtrainer">Become A Trainer</a>
+<router-outlet></router-outlet>
+
+<app-team-by-trainer-list></app-team-by-trainer-list>

@@ -103,7 +103,7 @@ namespace Pokemon
                 }
 
                 trainersPokemon.hp = pokemon.stats.First(x => x.stat.name == "hp").base_stat;
-                trainersPokemon.move_name = pokemon.moves.First(x => x.move.GetId() == pt.move_id).move.name;
+                trainersPokemon.move_name = pokemon.moves.FirstOrDefault(x => x.move.GetId() == pt.move_id)?.move?.name ?? "";
 
                 trainersPokemons.Add(trainersPokemon);
             }
@@ -147,7 +147,7 @@ namespace Pokemon
                     }
 
                     trainersPokemon.hp = pokemon.stats.First(x => x.stat.name == "hp").base_stat;
-                    trainersPokemon.move_name = pokemon.moves.First(x => x.move.GetId() == pt.move_id).move.name;
+                    trainersPokemon.move_name = pokemon.moves.FirstOrDefault(x => x.move.GetId() == pt.move_id)?.move?.name ?? "";
 
                     trainersPokemons.Add(trainersPokemon);
                 }

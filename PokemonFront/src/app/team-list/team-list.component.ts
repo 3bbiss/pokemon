@@ -11,6 +11,14 @@ export class TeamListComponent implements OnInit {
 
   teamList: Team[] = [];
   
+  team: Team = {
+    team_id: 0, team_name: '', trainer_id: 0,
+    trainer_name: '', pokemon: []
+  };
+
+  viewTeamOn: boolean = false;
+  editMode: boolean = false;
+
   constructor(private TeamSrv: TeamService) { 
     this.refresh();
   }
@@ -33,5 +41,54 @@ export class TeamListComponent implements OnInit {
       },
       team
     );
+  }
+
+  update(team: Team){
+    this.TeamSrv.updateTeam(
+      (result: Team) => {
+        this.refresh();
+      },
+      team
+    )
+    this.viewTeamOn = false;
+    this.editMode = false;
+  }
+
+  delete(id: number){
+    this.TeamSrv.deleteTeam(
+      () => {
+        this.refresh();
+      },
+      id
+    )
+    this.viewTeamOn = false;
+    this.editMode = false;
+  }
+
+  cancel(){
+    this.viewTeamOn = false;
+    this.editMode = false;
+  }
+
+  updateTeamOn(id: number) {
+    this.TeamSrv.getOneTeam(
+      (result: Team) => {
+        this.team = result;
+      },
+
+      id
+    )
+    this.editMode = true;
+  }
+
+  viewTeam(id: number) {
+    this.TeamSrv.getOneTeam(
+      (result: Team) => {
+        this.team = result;
+      },
+
+      id
+    )
+    this.viewTeamOn = true;
   }
 }
