@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../pokemon';
 import { PokemonService } from '../pokemon.service';
 import { ImageLoader } from '@angular/common';
+import { PokemonDetailComponent } from '../pokemon-detail/pokemon-detail.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -25,6 +27,15 @@ export class PokemonListComponent implements OnInit {
         this.pokemonList = result;
       }
     )
+  };
+
+  getPoke(pokemon_id: number) {
+    this.PokemonSrv.getOnePokemon (
+      () => {},
+      pokemon_id
+    )
+    alert(pokemon_id)
   }
+
 
 }
