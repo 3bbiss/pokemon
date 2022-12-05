@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'trainers', component: TrainerListComponent },
   { path: 'addtrainer', component: AddTrainerComponent },
   { path: 'trainerteams', component: TeamByTrainerListComponent },
-  { path: 'pokemon', component: PokemonListComponent }
+  { path: 'pokemon', component: PokemonListComponent },
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) }
 ];
 
 @NgModule({

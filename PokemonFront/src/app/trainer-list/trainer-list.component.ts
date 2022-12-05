@@ -10,16 +10,30 @@ import { TrainerService } from '../trainer.service';
 export class TrainerListComponent implements OnInit {
 
   trainerList: Trainer[] = [];
+  trainer: Trainer = {
+    id: 0, name: '', email: ''
+  }
 
   constructor(private TrainerSrv: TrainerService) { 
     this.refresh();
+
   }
 
   refresh(){
     this.TrainerSrv.getAllTrainers(
       (result: Trainer[]) => {
         this.trainerList = result;
+        this.GetTrainer(this.trainerList[0].id.toString())
       }
+    )
+  }
+
+  GetTrainer(id: string){
+    this.TrainerSrv.getOneTrainer(
+      (result: Trainer) => {
+        this.trainer = result
+      },
+      parseInt(id)
     )
   }
 
