@@ -6,17 +6,19 @@
 
     <div>
         <div>
+            Select A Trainer:
+            <select #trainerSelect (change)="GetTrainer(trainerSelect.value)">
+                <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+            </select>
+        </div>
             <br>
-            Select A Trainer Profile:
-        <select>
-            <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
-        </select>
-        <ng-container *ngFor="let trainer of trainerList">
+
             <app-trainer-detail
-            [trainer]="trainer" (delete)="deleteOne($event)"
+            [trainer]="this.trainer" (delete)="deleteOne($event)"
             (save)="saveEdit($event)"
             ></app-trainer-detail>
-        </ng-container>
-    </div>
 
+    </div>
+-->
 </div>
+
