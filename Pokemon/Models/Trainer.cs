@@ -47,7 +47,7 @@ namespace Pokemon
             db.Close();
         }
 
-        public async static Task DeleteTrainer(int id)
+        public static void DeleteTrainer(int id)
         {
             MySqlConnection db = new MySqlConnection(DAL.CS);
             db.Open();
@@ -55,7 +55,7 @@ namespace Pokemon
             trainer.id = id;
 
             // deleting the trainer's teams before deleting the trainer.
-            await TeamDisplay.DeleteTrainerTeams(id);
+            TeamDisplay.DeleteTrainerTeams(id);
 
             db.Delete<Trainer>(trainer);
             db.Close();

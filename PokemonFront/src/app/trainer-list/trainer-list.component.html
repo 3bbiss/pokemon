@@ -1,9 +1,16 @@
 <div>
-    <app-add-trainer (save)="save($event)"></app-add-trainer>
+    <!-- only keep this section for the add trainer route-->
+    <!--<app-add-trainer (save)="save($event)"></app-add-trainer> -->
 
     <p>List of Trainers</p>
 
     <div>
+        <div>
+            <br>
+            Select A Trainer Profile:
+        <select>
+            <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+        </select>
         <ng-container *ngFor="let trainer of trainerList">
             <app-trainer-detail
             [trainer]="trainer" (delete)="deleteOne($event)"

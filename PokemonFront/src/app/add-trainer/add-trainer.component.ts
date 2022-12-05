@@ -13,14 +13,20 @@ export class AddTrainerComponent implements OnInit {
 
   newTrainer: Trainer = {id: 0, name: '', email: ''};
 
-  @Output() save: EventEmitter<Trainer> = new EventEmitter<Trainer>();
+  //@Output() save: EventEmitter<Trainer> = new EventEmitter<Trainer>();
 
-  saveTrainer(){
+  save(trainer: Trainer){
+    this.TrainerSrv.addTrainer(
+      () => {},
+      trainer
+      );
+  }
+
+  /*saveTrainer(){
     this.save.emit(this.newTrainer);
     this.newTrainer.name = ''; // to clear out name field after saving
     this.newTrainer.email = ''; // to clear out email field after saving
-  }
-
+  }*/
 
   constructor(private TrainerSrv: TrainerService) {
     TrainerSrv.getAllTrainers(
