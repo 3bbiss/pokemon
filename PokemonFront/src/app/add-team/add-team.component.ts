@@ -4,6 +4,7 @@ import { Move } from '../move';
 import { Pokemon } from '../pokemon';
 import { PokemonService } from '../pokemon.service';
 import { Team } from '../team';
+import { TeamService } from '../team.service';
 import { Trainer } from '../trainer';
 import { TrainerPokemon } from '../trainer-pokemon';
 import { TrainerService } from '../trainer.service';
@@ -33,7 +34,7 @@ export class AddTeamComponent implements OnInit {
   
   @Output() save:EventEmitter<Team> = new EventEmitter<Team>();
 
-  constructor(private TrainerSrv: TrainerService, private PokemonSrv: PokemonService) { 
+  constructor(private TrainerSrv: TrainerService, private PokemonSrv: PokemonService, private TeamSrv: TeamService) { 
     TrainerSrv.getAllTrainers(
       (result: Trainer[]) => {
         this.trainerList = result;
@@ -48,6 +49,13 @@ export class AddTeamComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  saveTeam(team: Team){
+    this.TeamSrv.addTeam(
+      (result: Team) => {},
+      team
+    );
   }
 
   saveIt(){
@@ -70,7 +78,8 @@ export class AddTeamComponent implements OnInit {
     if (this.sixthPokemon) {
       this.newTeam.pokemon.push(<TrainerPokemon>{ pokemon_id: this.sixthPokemon?.id ?? 0 });
     }
-    this.save.emit(this.newTeam);
+    //this.save.emit(this.newTeam);
+    this.saveTeam(this.newTeam);
   }
 
 }

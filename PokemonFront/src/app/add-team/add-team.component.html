@@ -29,5 +29,5 @@
     <select [(ngModel)]="sixthPokemon">
         <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
     </select>
-    <button (click)="saveIt()">Save</button>
+    <button routerLink="/trainerteams" (click)="saveIt()">Save</button>
 </div>
