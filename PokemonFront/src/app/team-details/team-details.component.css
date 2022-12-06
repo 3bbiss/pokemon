@@ -1,4 +1,7 @@
 /* Style inputs, select elements and textareas */
+
+
+
 input[type=text], select, textarea {
     width: 30%;
     padding: 12px;
