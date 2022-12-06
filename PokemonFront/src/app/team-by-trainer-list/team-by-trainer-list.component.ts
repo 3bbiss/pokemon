@@ -4,6 +4,7 @@ import { TrainerService } from '../trainer.service';
 import { Team } from '../team';
 import { TeamService } from '../team.service';
 import { Pokemon } from '../pokemon';
+import { TrainerPokemon } from '../trainer-pokemon';
 
 @Component({
   selector: 'app-team-by-trainer-list',
@@ -92,6 +93,14 @@ export class TeamByTrainerListComponent implements OnInit {
       id
     )
     this.viewTeamOn = true;
+  }
+
+  getType(pokemon: TrainerPokemon){
+    return 'trainerTeamPokemon ' + pokemon.type[0] + '1';
+  }
+
+  getTypeCard(pokemon: TrainerPokemon){
+    return 'cardType ' + pokemon.type[0]  + '2';
   }
 
 }
