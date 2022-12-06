@@ -11,7 +11,6 @@ namespace Pokemon
         public string name { get; set; }
         public string email { get; set; }
 
-
         public static IEnumerable<Trainer> GetAllTrainers()
         {
             MySqlConnection db = new MySqlConnection(DAL.CS);
@@ -54,13 +53,10 @@ namespace Pokemon
             Trainer trainer = new Trainer();
             trainer.id = id;
 
-            // deleting the trainer's teams before deleting the trainer.
             TeamDisplay.DeleteTrainerTeams(id);
 
             db.Delete<Trainer>(trainer);
             db.Close();
         }
-
-
     }
 }

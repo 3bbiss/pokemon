@@ -2,8 +2,6 @@ using MySql.Data.MySqlClient;
 using Pokemon;
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -37,6 +35,6 @@ app.MapControllers();
 
 string connstring = app.Configuration.GetConnectionString("db");
 DAL.CS = connstring;
-DAL.DB = new MySqlConnection(connstring); // Need the using statement above. Can comment this out if we're using the DAL.CS Connection String
+DAL.DB = new MySqlConnection(connstring);
 
 app.Run();

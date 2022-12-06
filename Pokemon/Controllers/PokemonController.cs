@@ -7,8 +7,6 @@ namespace Pokemon.Controllers
     [ApiController]
     public class PokemonController : ControllerBase
     {
-        // create new instance of PokeApi
-        // to reference instead of Pokemon.GetPokemon
         private PokeApi pokeApi;
         
         public PokemonController(IMemoryCache memoryCache)

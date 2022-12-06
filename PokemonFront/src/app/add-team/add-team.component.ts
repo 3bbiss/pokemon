@@ -23,8 +23,7 @@ export class AddTeamComponent implements OnInit {
 
   trainerList: Trainer[] = []; 
   pokemonList: Pokemon[] = [];
-  // allows pokemon on team to be optional
-  // object can be null (aka: undefined value)
+
   firstPokemon: Pokemon|undefined;
   secondPokemon: Pokemon|undefined;
   thirdPokemon: Pokemon|undefined;
@@ -60,7 +59,6 @@ export class AddTeamComponent implements OnInit {
 
   saveIt(){
     if (this.firstPokemon) {
-      // out of fear, we account for bad id to be set to 0 to not break db
       this.newTeam.pokemon.push(<TrainerPokemon>{ pokemon_id: this.firstPokemon?.id ?? 0 });
     }
     if (this.secondPokemon) {
@@ -78,7 +76,6 @@ export class AddTeamComponent implements OnInit {
     if (this.sixthPokemon) {
       this.newTeam.pokemon.push(<TrainerPokemon>{ pokemon_id: this.sixthPokemon?.id ?? 0 });
     }
-    //this.save.emit(this.newTeam);
     this.saveTeam(this.newTeam);
   }
 
