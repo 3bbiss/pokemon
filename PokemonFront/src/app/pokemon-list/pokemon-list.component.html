@@ -34,13 +34,13 @@
       Name: {{this.pokemon.name}} <br>
       Height: {{this.pokemon.height / 10}}m<br>
       Weight: {{this.pokemon.weight / 4}} lbs<br>
-      <ng-container *ngFor="let types of this.typelist">
-        Type: {{types}}
+      Type: <br>
+      <ng-container *ngFor="let types of this.pokemon.types">
+        {{this.pokemon.types}}
       </ng-container>
       Description:
-      <ng-container *ngFor="let flavor of this.pokeSpecies.flavor_text_entries">
-        {{flavor.flavor_text}}
-      </ng-container>
+      {{this.pokeSpecies.flavor_text_entries[1].flavor_text}}
+      
     </div>
     
     <div class="centerbuttons">
