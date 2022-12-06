@@ -35,7 +35,7 @@ export class AddTrainerComponent implements OnInit {
       () => {},
       trainer
       );
-      this.refresh();
+      // this.refresh(); Moved this line to the constructor.
   }
 
   /*saveTrainer(){
@@ -50,6 +50,7 @@ export class AddTrainerComponent implements OnInit {
         this.TheTrainers = result;
       }
     );
+    this.refresh();
    }
 
   ngOnInit(): void {
