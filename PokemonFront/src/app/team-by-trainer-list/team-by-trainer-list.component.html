@@ -1,35 +1,69 @@
-<div *ngIf="!viewTeamOn && !editMode">
-    <br>
-    Select A Trainer:
-<select #trainerSelect (change)="GetTrainerTeams(trainerSelect.value)">
-    <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
-</select>
-<br>
-<div>
-    <h2>{{ team.trainer_name }}Pokemon Teams</h2>
-</div>
-    <div *ngFor="let team of teamList">
-        <h2>{{ team.team_name }}</h2>
-        <div *ngFor="let pokemon of team.pokemon">
-            {{ pokemon.pokemon_name }}
-            <img [src]="pokemon.pokemon_pics.front_default">
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div *ngIf="!viewTeamOn && !editMode">
+        <br>
+        Select A Trainer:
+        <select #trainerSelect (change)="GetTrainerTeams(trainerSelect.value)">
+            <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+        </select>
+        <br>
+        <div>
+            <h2>{{ this.team.trainer_name }}'s Pokemon Teams</h2>
         </div>
-        <button (click)="viewTeam(team.team_id)"> View Team Details</button>
 
+
+
+
+        <table>
+            <tr>
+                <div *ngFor="let team of teamList">
+                    <td><div><button class="trainerTeamName" (click)="viewTeam(team.team_id)">{{ team.team_name }}</button></div>
+                    </td>
+                    <ng-container class="trainerTeamPokemon">
+                    <ng-container *ngFor="let pokemon of team.pokemon">
+                        <td [ngClass]="getType(pokemon)">
+                            <span class="pokemonName" >{{ pokemon.pokemon_name }} </span>
+                                    <img class="pokemonImage" [src]="pokemon.pokemon_pics.front_default" >
+                        </td>
+                    </ng-container>
+                </ng-container>
+
+                    <!--<td><button (click)="viewTeam(team.team_id)"> View Team Details</button></td> -->
+                </div>
+            </tr>
+        </table>
     </div>
-</div> 
+
+
+
 <div *ngIf="viewTeamOn && !editMode">
-    <div *ngFor="let pokemon of team.pokemon">
-        <img [src]="pokemon.pokemon_pics.front_default"/>
-       {{ pokemon.pokemon_name }}  HP: {{ pokemon.hp }}<br/>
-        {{ pokemon.type }}
+    <div  class="card-list">
+        <div *ngFor="let pokemon of team.pokemon" class="card">
+            <div [ngClass]="getTypeCard(pokemon)">
+                <div><img class="pokemonCardImage" [src]="pokemon.pokemon_pics.front_default" /></div>
+                <div>{{ pokemon.pokemon_name }} HP: {{ pokemon.hp }}</div><br />
+                <div>{{ pokemon.type }}</div>
+            </div>
+            
+        </div>
     </div>
-    <!-- Want this update to take us to new edit view -->
-    <button (click)="updateTeamOn(team.team_id)">Edit Team</button>
-    <button (click)="delete(team)">Delete</button>
-</div>
+        <!-- Want this update to take us to new edit view -->
+        <button (click)="updateTeamOn(team.team_id)">Edit Team</button>
+        <button (click)="delete(team)">Delete</button>
+        <button (click)="cancel()">Back</button>
+    </div>
 
-<div *ngIf="editMode && viewTeamOn">
-<app-team-details [team]="team" (update)="update($event)"></app-team-details> 
-<button (click)="cancel()">Cancel</button>
-</div>   
+    <div *ngIf="editMode && viewTeamOn">
+        <app-team-details [team]="team" (update)="update($event)"></app-team-details>
+        <button (click)="cancel()">Cancel</button>
+    </div>
+
+
