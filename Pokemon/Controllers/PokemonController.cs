@@ -21,7 +21,7 @@ namespace Pokemon.Controllers
         public async Task<IEnumerable<Pokemon>> GetAll()
         {
             List<Pokemon> pokemons = new List<Pokemon>();
-            for(int i = 1; i <= 151; i++)
+            for(int i = 1; i <= 15; i++)
             {
                 pokemons.Add( await pokeApi.GetPokemon(i));
             }
