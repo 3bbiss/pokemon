@@ -5,85 +5,86 @@
     </div>
     <div>
         <div class="container center">
-            Team Name:&nbsp;
-            <input type="text" [(ngModel)]="this.team.team_name" /><br/>
+            <div class="block">
+                <div class="inline qtr"><label for="teamName">Team Name:&nbsp;</label></div>
+                <div class="three-qtr inline"><input type="text" [(ngModel)]="this.team.team_name" /></div>
+            </div>
 
-    <ng-container class="row">
-        <ng-container class="col-25">
-            <label for="trainerName">Trainer:&nbsp; &nbsp; &nbsp; &nbsp;</label>
-        </ng-container>
-        <ng-container class="col-75">
-            <select [(ngModel)]="this.team.trainer_id">
-                <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
-            </select> <br/>
-        </ng-container>
-    </ng-container>
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="trainerName">Trainer:&nbsp; &nbsp; &nbsp; &nbsp;</label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="this.team.trainer_id">
+                        <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+                    </select>
+                </div>
 
-    <ng-container class="row">
-        <ng-container class="col-25">
-            <label for="pokemon1"> Pokemon 1: </label>
-        </ng-container>
-        <ng-container class="col-75">
-            <select [(ngModel)]="this.firstPokemon">
-                <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
-            </select><br/>
-        </ng-container>
-    </ng-container>
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon1"> Pokemon 1: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="this.firstPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
 
-    <ng-container class="row">
-        <ng-container class="col-25">
-            <label for="pokemon2"> Pokemon 2: </label>
-        </ng-container>
-        <ng-container class="col-75">
-            <select [(ngModel)]="this.secondPokemon">
-                <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
-            </select><br/>
-        </ng-container>
-    </ng-container>
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon2"> Pokemon 2: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="this.secondPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
 
-    <ng-container class="row">
-        <ng-container class="col-25">
-            <label for="pokemon3"> Pokemon 3: </label>
-        </ng-container>
-        <ng-container class="col-75">
-            <select [(ngModel)]="this.thirdPokemon">
-                <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
-            </select><br/>
-        </ng-container>
-    </ng-container>
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon3"> Pokemon 3: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="this.thirdPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
 
-    <ng-container class="row">
-        <ng-container class="col-25">
-            <label for="pokemon4"> Pokemon 4: </label>
-        </ng-container>
-        <ng-container class="col-75">
-            <select [(ngModel)]="this.fourthPokemon">
-                <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
-            </select><br/>
-        </ng-container>
-    </ng-container>
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon4"> Pokemon 4: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="this.fourthPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
+                </select><br/>
+    </div>
+</div>
 
-    <ng-container class="row">
-        <ng-container class="col-25">
+            <div class="block">
+                <div class="inline qtr">
             <label for="pokemon5"> Pokemon 5: </label>
-        </ng-container>
-        <ng-container class="col-75">
+    </div>
+                <div class="three-qtr inline">
             <select [(ngModel)]="this.fifthPokemon">
                 <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
             </select><br/>
-        </ng-container>
-    </ng-container>
+    </div>
+</div>
 
-    <ng-container class="row">
-        <ng-container class="col-25">
+            <div class="block">
+                <div class="inline qtr">
             <label for="pokemon6"> Pokemon 6: </label>
-        </ng-container>
-        <ng-container class="col-75">
+    </div>
+                <div class="three-qtr inline">
             <select [(ngModel)]="this.sixthPokemon">
                 <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon">{{ pokemon.name }}</option>
             </select><br/>
-        </ng-container>
-    </ng-container>
+    </div>
+</div>
     <button (click)="updateIt()">Save Changes</button>
         </div>
            
