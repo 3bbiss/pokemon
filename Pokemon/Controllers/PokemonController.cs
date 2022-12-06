@@ -34,5 +34,12 @@ namespace Pokemon.Controllers
         {
             return await pokeApi.GetPokemon(id);
         }
+
+        [HttpGet]
+        [Route("pokemon-species/{id}")]
+        public async Task<PokemonSpecies> GetSpecies(int id)
+        {
+            return await pokeApi.GetSpecies(id);
+        }
     }
 }

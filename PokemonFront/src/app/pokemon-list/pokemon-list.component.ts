@@ -6,6 +6,11 @@ import { PokemonSprites } from "../pokemon-sprites";
 import { SpeciesName } from "../species-name";
 import { Stats } from "../stats";
 import { Type } from "../type";
+import { PokemonSpeciesService } from '../pokemon-species.service';
+import { PokemonSpecies } from '../pokemon-species';
+import { FlavorText } from '../flavor-text';
+import { Language } from '../language';
+import { GVersion } from '../gversion';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -21,6 +26,18 @@ export class PokemonListComponent implements OnInit {
   typelist: Type[] = [];
   sprites: PokemonSprites = {front_default: "", front_shiny: "", front_female: "", front_shiny_female: ""};
   species: SpeciesName = {name: "", url: ""}
+  language: Language = {
+    id:0, name: "en"
+  }
+  version: GVersion = {
+    id:0, name: "red"
+  }
+  
+  flavorlist: FlavorText[] = [{
+    flavor_text : "",
+    language : this.language,
+    version : this.version
+  }]
 
   pokemon: Pokemon = {
     id: 0,
@@ -36,12 +53,20 @@ export class PokemonListComponent implements OnInit {
       types: this.typelist
    }
 
+   pokeSpecies: PokemonSpecies = {
+      id: 0,
+      name: "",
+      is_legendary: false,
+      is_mythical: false,
+      flavor_text_entries: this.flavorlist
+   };
+
   
 
   pokemonList: Pokemon[] = [];
   closeResult: string = '';
 
-  constructor(private PokemonSrv: PokemonService) { 
+  constructor(private PokemonSrv: PokemonService, private SpeciesSrv: PokemonSpeciesService) { 
     this.refresh();
   }
 
@@ -76,10 +101,37 @@ export class PokemonListComponent implements OnInit {
     )
   };
 
+  previousText(pokemon_id: number) {
+    this.SpeciesSrv.getSpecies (
+      (result: PokemonSpecies) => {
+        this.pokeSpecies = result;
+      },
+      pokemon_id -1
+    )
+  };
+
+  getSpecies(pokemon_id: number) {
+    this.SpeciesSrv.getSpecies (
+      (result: PokemonSpecies) => {
+        this.pokeSpecies = result;
+      },
+      pokemon_id
+    )
+  };
+
   next(pokemon_id: number) {
     this.PokemonSrv.getOnePokemon (
       (result: Pokemon) => {
         this.pokemon = result;
+      },
+      pokemon_id +1
+    )
+  };
+
+  nextText(pokemon_id: number) {
+    this.SpeciesSrv.getSpecies (
+      (result: PokemonSpecies) => {
+        this.pokeSpecies = result;
       },
       pokemon_id +1
     )

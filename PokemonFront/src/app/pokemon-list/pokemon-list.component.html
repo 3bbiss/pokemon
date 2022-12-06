@@ -14,7 +14,7 @@
               <div class="pokeball">
                   <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
               </div>
-             <button (click)="showPoke(this.pokemon.id)" class="button-33 font" role="button">{{ pokemon.name }}</button>
+             <button (click)="getSpecies(this.pokemon.id)" (click)="showPoke(this.pokemon.id)" class="button-33 font" role="button">{{ pokemon.name }}</button>
             
           <!-- </li> -->
       </div>
@@ -37,11 +37,15 @@
       <ng-container *ngFor="let types of this.typelist">
         Type: {{types}}
       </ng-container>
+      Description:
+      <ng-container *ngFor="let flavor of this.pokeSpecies.flavor_text_entries">
+        {{flavor.flavor_text}}
+      </ng-container>
     </div>
     
     <div class="centerbuttons">
-      <button class="button-33" role="button" (click)="previous(this.pokemon.id)">Previous</button>
-      <button class="button-33" role="button" (click)="next(this.pokemon.id)">Next</button> <br><br>
+      <button class="button-33" role="button" (click)="previousText(this.pokeSpecies.id)"  (click)="previous(this.pokemon.id)">Previous</button>
+      <button class="button-33" role="button" (click)="nextText(this.pokeSpecies.id)" (click)="next(this.pokemon.id)">Next</button> <br><br>
       <button class="button-33" role="button" (click)="cancel()">Cancel</button>
     </div>
     
