@@ -1,33 +1,93 @@
 <div>
-    <h2>Create A New Pokemon Team!</h2>
-    Team Name: <input type="text" [(ngModel)]="newTeam.team_name"/><br/>
-    Trainer: 
-    <select [(ngModel)]="newTeam.trainer_id">
-        <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
-    </select>
-    Pokemon 1:
-    <select [(ngModel)]="firstPokemon">
-        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
-    </select>
-    Pokemon 2:
-    <select [(ngModel)]="secondPokemon">
-        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
-    </select>
-    Pokemon 3:
-    <select [(ngModel)]="thirdPokemon">
-        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
-    </select>
-    Pokemon 4:
-    <select [(ngModel)]="fourthPokemon">
-        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
-    </select>
-    Pokemon 5:
-    <select [(ngModel)]="fifthPokemon">
-        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
-    </select>
-    Pokemon 6:
-    <select [(ngModel)]="sixthPokemon">
-        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
-    </select>
-    <button routerLink="/trainerteams" (click)="saveIt()">Save</button>
+    <div class="rsvpform">
+        <h1>Create A New Pokemon Team!</h1>
+        <hr />
+    </div>
+    
+    <div>
+        <div class="container center">
+            <div class="block">
+                <div class="inline qtr"><label for="teamName">Team Name:&nbsp;</label></div>
+                <div class="three-qtr inline"><input type="text" [(ngModel)]="newTeam.team_name"></div>
+            </div>
+    
+        <div class="block">
+            <div class="inline qtr">
+                <label for="trainerName">Trainer:&nbsp; &nbsp; &nbsp; &nbsp;</label>
+            </div>
+            <div class="three-qtr inline">
+                <select [(ngModel)]="newTeam.trainer_id">
+                    <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+                </select>
+            </div>
+    
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon1"> Pokemon 1: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="firstPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon2"> Pokemon 2: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="secondPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
+     
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon3"> Pokemon 3: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="thirdPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon" >{{ pokemon.name }}</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="block">
+                <div class="inline qtr">
+                    <label for="pokemon4"> Pokemon 4: </label>
+                </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="fourthPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
+                    </select><br/>
+                </div>
+            </div>
+    
+            <div class="block">
+                <div class="inline qtr">
+            <label for="pokemon5"> Pokemon 5: </label>
+            </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="fifthPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
+                    </select><br/>
+                </div>
+            </div>
+    
+            <div class="block">
+                <div class="inline qtr">
+            <label for="pokemon6"> Pokemon 6: </label>
+            </div>
+                <div class="three-qtr inline">
+                    <select [(ngModel)]="sixthPokemon">
+                        <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"  >{{ pokemon.name }}</option>
+                    </select><br/>
+                </div>
+            </div>
+        <button routerLink="/trainerteams" (click)="saveIt()">Save</button>
+        </div>
+    </div>
 </div>
+    

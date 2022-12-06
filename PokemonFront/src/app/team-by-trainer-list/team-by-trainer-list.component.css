@@ -1,8 +1,4 @@
 
-body{
-    background-image: url(..\Images\background3.png);
-}
-
  .trainerTeamName{
     border: 1px solid black;
     font-family: 'Montserrat', sans-serif;
@@ -383,8 +379,3 @@ body{
     background-position: left;
     background-color: #E0306A;
  } 
-
-
- /* Update team form */
-
- 

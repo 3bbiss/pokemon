@@ -20,8 +20,6 @@
         </div>
 
 
-
-
         <table>
             <tr>
                 <div *ngFor="let team of teamList">
@@ -65,5 +63,3 @@
         <app-team-details [team]="team" (update)="update($event)"></app-team-details>
         <button (click)="cancel()">Cancel</button>
     </div>
-
-
