@@ -102,5 +102,4 @@ export class TeamByTrainerListComponent implements OnInit {
   getTypeCard(pokemon: TrainerPokemon){
     return 'cardType ' + pokemon.type[0]  + '2';
   }
-
 }

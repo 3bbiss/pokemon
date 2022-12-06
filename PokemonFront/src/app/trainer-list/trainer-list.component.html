@@ -1,24 +1,38 @@
-<div>
-    <!-- only keep this section for the add trainer route-->
-    <!--<app-add-trainer (save)="save($event)"></app-add-trainer> -->
-
-    <p>List of Trainers</p>
-
-    <div>
-        <div>
-            Select A Trainer:
-            <select #trainerSelect (change)="GetTrainer(trainerSelect.value)">
-                <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
-            </select>
+<body>
+    <section>
+        <p>List of Trainers</p>
+        <div class="card-list">
+            <!-- only keep this section for the add trainer route-->
+            <!--<app-add-trainer (save)="save($event)"></app-add-trainer> -->
+            
+        
+            <!-- <div>
+                <div>
+                    Select A Trainer:
+                    <select #trainerSelect (change)="GetTrainer(trainerSelect.value)">
+                        <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
+                    </select>
+                </div>
+                    <br>
+        
+                    <app-trainer-detail
+                    [trainer]="this.trainer" (delete)="deleteOne($event)"
+                    (save)="saveEdit($event)"
+                    ></app-trainer-detail>
+        
+            </div> -->
+        
+            <div *ngFor="let trainer of trainerList" class="card">
+                    <app-trainer-detail 
+                    [trainer]="trainer" (delete)="deleteOne($event)"
+                    (save)="saveEdit($event)"
+                    ></app-trainer-detail>
+        
+            </div>
+        
         </div>
-            <br>
+    </section>
+</body>
 
-            <app-trainer-detail
-            [trainer]="this.trainer" (delete)="deleteOne($event)"
-            (save)="saveEdit($event)"
-            ></app-trainer-detail>
 
-    </div>
--->
-</div>
 
