@@ -8,11 +8,15 @@
         <button (click)="deleteMe()">Delete Trainer</button> <br/> <br/>
     </div>
 
-    <div *ngIf="editMode">
-        <input type="text" [(ngModel)]="editName"/>
-        <input type="text" [(ngModel)]="editEmail"/>
-        <button (click)="saveEdit()">Save Edits</button>
-        <button (click)="cancelEdit()">Cancel Edits</button>
+    <div class="container center" *ngIf="editMode">
+        <div class="block">
+            <div class="inline qtr"><label for="editName">Trainer Name:</label></div>
+            <div class="three-qtr inline"><input type="text" [(ngModel)]="editName"/></div>
+            
+            <div class="inline qtr"><label for="editEmail">Trainer Email:</label></div>
+            <div class="three-qtr inline"><input type="text" [(ngModel)]="editEmail"/></div>
+            <button (click)="saveEdit()">Save Edits</button>
+            <button (click)="cancelEdit()">Cancel Edits</button>
+        </div>
     </div>
-
 </div>
