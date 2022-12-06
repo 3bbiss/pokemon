@@ -47,11 +47,11 @@
 <div *ngIf="viewTeamOn && !editMode">
     <div  class="card-list">
         <div *ngFor="let pokemon of team.pokemon" class="card">
-            <span [ngClass]="getTypeCard(pokemon)">
-                <img class="pokemonCardImage" [src]="pokemon.pokemon_pics.front_default" />
-                {{ pokemon.pokemon_name }} HP: {{ pokemon.hp }}<br />
-                {{ pokemon.type }}
-            </span>
+            <div [ngClass]="getTypeCard(pokemon)">
+                <div><img class="pokemonCardImage" [src]="pokemon.pokemon_pics.front_default" /></div>
+                <div>{{ pokemon.pokemon_name }} HP: {{ pokemon.hp }}</div><br />
+                <div>{{ pokemon.type }}</div>
+            </div>
             
         </div>
     </div>
