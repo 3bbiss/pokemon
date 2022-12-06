@@ -15,7 +15,6 @@ input[type=text], select, textarea {
  /* Style the label to display next to the inputs */
  label {
     padding: 12px 12px 12px 0;
-    display: inline-block;
  }
  
  /* Style the submit button */
@@ -37,6 +36,13 @@ input[type=text], select, textarea {
     padding:15px;
     max-width: 30%;
  }
+
+ @media only screen and (max-width: 720px) {
+   .container {
+   width: 100%;
+   max-width: 100%;
+}
+}
  
  /* Floating column for labels: 25% width */
  .col-25 {
@@ -81,3 +87,46 @@ input[type=text], select, textarea {
     margin-right: auto;
     width: 50%;
   }
+
+  .inline { 
+   display: inline-block;
+}
+
+@media only screen and (max-width: 720px) {
+   .inline { 
+      display:block;
+   }
+}
+
+.qtr {
+   width: 25%;
+}
+
+@media only screen and (max-width: 720px) {
+   .qtr {
+   width: 100%;
+}
+}
+
+.three-qtr {
+   width: 75%;
+   text-align: center;
+}
+
+@media only screen and (max-width: 720px) {
+   .three-qtr {
+   width: 100%;
+}
+}
+
+.block {
+   display: block;
+}
+
+select, input[type=text] { width: 70%;}
+
+@media only screen and (max-width: 720px) {
+   select, input[type=text] { 
+      width: 100%;
+   }
+}
