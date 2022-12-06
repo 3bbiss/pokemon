@@ -59,6 +59,5 @@ namespace Pokemon.Controllers
         {
             TeamDisplay.UpdateTeam(team);
         }
-
     }
 }
