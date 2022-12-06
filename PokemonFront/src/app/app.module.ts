@@ -15,9 +15,7 @@ import { AddTrainerComponent } from './add-trainer/add-trainer.component';
 
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { TeamDetailsComponent } from './team-details/team-details.component';
-import { TeamByTrainerListComponent } from './team-by-trainer-list/team-by-trainer-list.component';
-import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+import { TeamByTrainerListComponent } from './team-by-trainer-list/team-by-trainer-list.component'; 
 
 @NgModule({
   declarations: [
@@ -29,15 +27,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AddTrainerComponent,
     PokemonListComponent,
     TeamDetailsComponent,
-    TeamByTrainerListComponent,
-    PokemonDetailComponent
+    TeamByTrainerListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    NgbModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

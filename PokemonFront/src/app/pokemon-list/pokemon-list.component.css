@@ -1,32 +1,3 @@
-.button-33 {
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-33:hover {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  transform: scale(1.10);
-}
-
-.dex {
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Press Start 2P', cursive;
-}
-
 .font {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Press Start 2P', cursive;
@@ -35,34 +6,17 @@
 }
 
 .bubble {
-    background-color: rgb(234, 255, 249);
+    background-color: rgb(206, 224, 252);
     outline-offset: 5px;
-    border: 3px solid white;
-    border-color: rgb(201, 249, 228);
+    border: 4px solid white;
+    border-color: black;
     border-radius: 10px;
     margin: 60px;
-    padding: 25px;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 
-.centerbuttons {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  text-align: center;
-}
 
-.centerbuttons button {
-  margin: auto 10px;
-}
-
-/* ul {
+ul {
     display: grid;
     grid-auto-columns: 1fr; 
     grid-auto-rows: 1fr; 
@@ -76,38 +30,25 @@
 li {
     display: inline;
     vertical-align: top;
-} */
-
-
-.pokemon {
-  min-width: 150px;
-  text-align: center;
-  margin: 20px;
 }
 
 .pokeball {
     background: url(..\Images\pokeballsmall.png);
     background-repeat: no-repeat;
-    background-position: center;   
-}
-.pokeball img { 
-  margin: auto;
-text-align: center;
-display: block;
-}
-
-
-.flex { 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    background-position: center;
+    
 }
 
 
 
-
-
-
-
-
-
+/* display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "col1-item1 col2-item1 col3-item1"
+    "col1-item2 col2-item2 col3-item2"
+    "col1-item3 col2-item3 col3-item3"
+    "col1-item4 col2-item3 col3-item4";  */
