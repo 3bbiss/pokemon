@@ -33,6 +33,7 @@ namespace Pokemon
             Team team = new Team();
             team.trainer_id = teamDisplay.trainer_id;
             team.name = teamDisplay.team_name;
+
             DB.Insert(team);
 
             foreach (TrainersPokemon pokemon in teamDisplay.pokemon)
@@ -41,6 +42,7 @@ namespace Pokemon
                 pokemonTeam.team_id = team.id;
                 pokemonTeam.pokemon_id = pokemon.pokemon_id;
                 pokemonTeam.move_id = pokemon.move_id;
+
                 DB.Insert(pokemonTeam);
             }
 
@@ -64,8 +66,6 @@ namespace Pokemon
             DB.Open();
 
             Trainer trainer = new Trainer() { id = trainer_id};
-            // changing to just pull list of teams from DB not from model
-            // same logic from existing method
             List<Team> teams = DB.GetAll<Team>().Where(x => x.trainer_id == trainer_id).ToList();
 
             foreach (Team trainerTeam in teams)
@@ -74,10 +74,9 @@ namespace Pokemon
             }
 
             DB.Close();
-
         }
 
-        public static void UpdateTeam(TeamDisplay team) //DB Team
+        public static void UpdateTeam(TeamDisplay team)
         {
             MySqlConnection DB = new MySqlConnection(DAL.CS);
             DB.Open();
@@ -88,11 +87,11 @@ namespace Pokemon
                 name = team.team_name,
                 trainer_id = team.trainer_id,
             });
+
             DB.Delete(new PokemonTeam { team_id = team.team_id });
 
             foreach (TrainersPokemon pokemon in team.pokemon)
             {
-                // limit number of pokemon on a team to 6 in frontend
                 PokemonTeam pokemonTeam = new PokemonTeam();
                 pokemonTeam.team_id = team.team_id;
                 pokemonTeam.pokemon_id = pokemon.pokemon_id;
@@ -102,8 +101,5 @@ namespace Pokemon
 
             DB.Close();
         }
-
     }
-
-
 }

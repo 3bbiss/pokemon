@@ -24,7 +24,6 @@ export class TeamByTrainerListComponent implements OnInit {
   viewTeamOn: boolean = false;
   editMode: boolean = false;
 
-
   constructor(private TrainerSrv: TrainerService, private TeamSrv: TeamService) { 
     TrainerSrv.getAllTrainers(
       (result: Trainer[]) => {

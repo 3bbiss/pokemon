@@ -5,7 +5,6 @@ import { Trainer } from '../trainer';
 import { TrainerService } from '../trainer.service';
 import { Team } from '../team';
 import { TrainerPokemon } from '../trainer-pokemon';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-team-details',
@@ -48,7 +47,6 @@ export class TeamDetailsComponent implements OnInit {
       }
     );
 
-    // since pokemon runs slows - need to set an assign point
     PokemonSrv.getAllPokemon(
       (result: Pokemon[]) =>{
         this.pokemonList = result;
@@ -74,8 +72,6 @@ export class TeamDetailsComponent implements OnInit {
   }
 
   updateIt(){
-    //clearing list to send back full new list (prepopulated items refill)
-    //this.editTeam.pokemon = this.team.pokemon;
     this.team.pokemon = [];
 
     if (this.firstPokemon) {

@@ -5,9 +5,6 @@ namespace Pokemon
 {
     public class TrainersPokemon
     {
-        // not including species only default is stored
-        // will have buttons to toggle to show variety
-        // fun idea for another time :)
         public int pokemon_id { get; set; }
         public int? move_id { get; set; }
         public string? pokemon_name {get; set; }
