@@ -21,7 +21,7 @@ namespace Pokemon.Controllers
         public async Task<IEnumerable<Pokemon>> GetAll()
         {
             List<Pokemon> pokemons = new List<Pokemon>();
-            for(int i = 1; i <= 12; i++)
+            for(int i = 1; i <= 151; i++)
             {
                 pokemons.Add( await pokeApi.GetPokemon(i));
             }
@@ -33,6 +33,13 @@ namespace Pokemon.Controllers
         public async Task<Pokemon> Get(int id)
         {
             return await pokeApi.GetPokemon(id);
+        }
+
+        [HttpGet]
+        [Route("pokemon-species/{id}")]
+        public async Task<PokemonSpecies> GetSpecies(int id)
+        {
+            return await pokeApi.GetSpecies(id);
         }
     }
 }

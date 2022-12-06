@@ -6,6 +6,7 @@ import { TrainerListComponent } from './trainer-list/trainer-list.component';
 import { AddTrainerComponent } from './add-trainer/add-trainer.component';
 import { TeamByTrainerListComponent } from './team-by-trainer-list/team-by-trainer-list.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 
 const routes: Routes = [
   { path: 'teams', component: TeamListComponent},
@@ -14,7 +15,9 @@ const routes: Routes = [
   { path: 'addtrainer', component: AddTrainerComponent },
   { path: 'trainerteams', component: TeamByTrainerListComponent },
   { path: 'pokemon', component: PokemonListComponent },
+
   //{ path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) }
+  { path: 'pokemondetail', component: PokemonDetailComponent }
 ];
 
 @NgModule({
