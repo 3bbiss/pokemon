@@ -1,0 +1,349 @@
+
+body{
+    background-image: url(..\Images\background3.png);
+}
+
+ .trainerTeamName{
+    border: 1px solid black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+ }
+
+ .trainerTeamName:hover{
+    background-color:#5B5466;
+    box-shadow:  0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ .trainerTeamPokemon{
+    border: 1px solid black;
+    width: 150px;
+}
+
+.pokemonImage{
+    display: block;
+    margin-right: auto;
+    margin-left: 40%;
+    width: 65%;
+ }
+
+ .pokemonName {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    display: flex;
+
+    flex-wrap: wrap;
+  
+    justify-content: center;
+  }
+
+ .grass1{
+    background: url(..\Images\grasstype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #38BF4B;
+ }
+
+ .bug1{
+    background: url(..\Images\bugtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #83C300;
+}
+
+ .water1{
+    background: url(..\Images\watertype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #3692DC;
+ }
+
+ .normal1{
+    background: url(..\Images\normaltype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #919AA2;
+ }
+
+ .fire1{
+    background: url(..\Images\firetype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FF9741;
+ }
+
+ .dragon1{
+    background: url(..\Images\dragontype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #006FC9;
+ }
+
+ .rock1{
+    background: url(..\Images\rocktype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #C8B686;
+ }
+
+ .poison1{
+    background: url(..\Images\poisontype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #B567CE;
+ }
+
+ .ground1{
+    background: url(..\Images\groundtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #E87236;
+ }
+
+ .ghost1{
+    background: url(..\Images\ghosttype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #4C6AB2;
+ }
+
+ .electric1{
+    background: url(..\Images\electrictype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FBD100;
+ }
+
+ .flying1{
+    background: url(..\Images\flyingtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #89AAE3;
+ }
+
+ .steel1{
+    background: url(..\Images\steeltype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #5A8EA2;
+ }
+
+ .dark1{
+    background: url(..\Images\darktype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #5B5466;
+ }
+
+ .fairy1{
+    background: url(..\Images\fairytype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FB89EB;
+ }
+
+ .psychic1{
+    background: url(..\Images\psychictype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FF6675;
+ }
+
+ .fighting1{
+    background: url(..\Images\fightingtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #E0306A;
+ }
+
+ /* Team details view as cards*/
+ .card-list{
+    display: flex;   
+}
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 250px;
+    width: 60%;
+    padding: 3rem;
+    border-radius: 16px; 
+    box-shadow:  hsl(228, 30%, 20%);
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card{
+    transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.grass2{
+    background: url(..\Images\grasscard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #38BF4B;
+ }
+
+ .bug2{
+    background: url(..\Images\grasscard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #83C300;
+}
+
+ .water2{
+    background: url(..\Images\watercard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #3692DC;
+ }
+
+ .normal2{
+    background: url(..\Images\normalcard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #919AA2;
+ }
+
+ .fire2{
+    background: url(..\Images\firecard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FF9741;
+ }
+
+ .dragon2{
+    background: url(..\Images\dragontype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #006FC9;
+ }
+
+ .rock2{
+    background: url(..\Images\rocktype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #C8B686;
+ }
+
+ .poison2{
+    background: url(..\Images\poisontype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #B567CE;
+ }
+
+ .ground2{
+    background: url(..\Images\groundtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #E87236;
+ }
+
+ .ghost2{
+    background: url(..\Images\ghosttype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #4C6AB2;
+ }
+
+ .electric2{
+    background: url(..\Images\electrictype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FBD100;
+ }
+
+ .flying2{
+    background: url(..\Images\flyingtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #89AAE3;
+ }
+
+ .steel2{
+    background: url(..\Images\steeltype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #5A8EA2;
+ }
+
+ .dark2{
+    background: url(..\Images\darktype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #5B5466;
+ }
+
+ .fairy2{
+    background: url(..\Images\fairytype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FB89EB;
+ }
+
+ .psychic2{
+    background: url(..\Images\psychictype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #FF6675;
+ }
+
+ .fighting2{
+    background: url(..\Images\fightingtype.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #E0306A;
+ } 
+
+
+ /* Update team form */
+
+ 
