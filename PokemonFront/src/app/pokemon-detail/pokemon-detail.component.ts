@@ -15,7 +15,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class PokemonDetailComponent implements OnInit {
 
-  constructor(private PokeSrv: PokemonService) { }
+  constructor(private PokemonSrv: PokemonService) { }
   movelist: Move[] = [];
   statlist: Stats[] = [];
   typelist: Type[] = [];
@@ -40,10 +40,14 @@ export class PokemonDetailComponent implements OnInit {
   }
 
   getPoke(pokemon_id: number) {
-    this.PokeSrv.getOnePokemon (
-      () => {},
+    this.PokemonSrv.getOnePokemon (
+      (result: Pokemon) => {
+        this.pokemon = result;
+      },
       pokemon_id
     )
+    alert()
+    
   }
 
 }

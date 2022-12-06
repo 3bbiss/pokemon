@@ -5,18 +5,68 @@
 </head>
 
 <div class="font" style="font-size: larger; margin: 20px">Kanto Pokedex</div>
-<div class="bubble">
-    <ul>
-        <div *ngFor="let pokemon of pokemonList">
-            <li style="margin: 10px">
-                <div class="pokeball">
-                    <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
-                </div>
-                <button (click)="getPoke(this.pokemon.id)" class="button-33" role="button"><div class="font">{{ pokemon.name }}</div></button>
-                
-            </li>
-        </div>
-    </ul>
+<ng-container *ngIf="!showdetails">
+
+    <div class="bubble flex">
+    <!-- <ul> -->
+      <div *ngFor="let pokemon of pokemonList" class="pokemon">
+          <!-- <li style="margin: 10px"> -->
+              <div class="pokeball">
+                  <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
+              </div>
+             <button (click)="showPoke(this.pokemon.id)" class="button-33 font" role="button">{{ pokemon.name }}</button>
+            
+          <!-- </li> -->
+      </div>
+  <!-- </ul> -->
+</div>
+</ng-container>
+    
+
+
+<div class="bubble dex">
+  <ng-container *ngIf="showdetails">
+    <div class="pokeball">
+      <img  class="center" style="width: 15%; height: auto;" [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
+    </div>    
+
+    <div class="center">
+      Name: {{this.pokemon.name}} <br>
+      Height: {{this.pokemon.height / 10}}m<br>
+      Weight: {{this.pokemon.weight / 4}} lbs<br>
+      <ng-container *ngFor="let types of this.typelist">
+        Type: {{types}}
+      </ng-container>
+    </div>
+    
+    <div class="centerbuttons">
+      <button class="button-33" role="button" (click)="previous(this.pokemon.id)">Previous</button>
+      <button class="button-33" role="button" (click)="next(this.pokemon.id)">Next</button> <br><br>
+      <button class="button-33" role="button" (click)="cancel()">Cancel</button>
+    </div>
+    
+  </ng-container>
+    
 </div>
 
-<app-pokemon-detail></app-pokemon-detail>
+
+
+
+  
+<!-- <button class="button" class="button-33" (click)="open(mymodal)">Open My Modal</button>
+   
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">X</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
+ -->
