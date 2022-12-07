@@ -176,6 +176,14 @@
     background-color: #E0306A;
  }
 
+ .ice1{
+   background: url(..\Images\icetype.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: left;
+   background-color: #3ad8ff;
+}
+
  /* Team details view as cards*/
 
  .pokemonCardImage{
@@ -185,8 +193,9 @@
 }
 
 .pokemonCardText{
+   padding-top: 3rem;
    margin-top: 1px;
-   font-size: 10px;
+   font-size: 16px;
    
 }
 
@@ -212,7 +221,7 @@
    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
 }
 
-.card{
+/* .card{
    display: flex;
    position: center;
    flex-direction: column;
@@ -222,19 +231,18 @@
    padding: 3rem;
    border-radius: 16px;
    /*box-shadow: -1rem 0 3rem hsl(228, 76%, 45%);*/
-   transition: .2s;
-}
+   /* transition: .2s;
+} */
 
 .cardType{
    display: flex;
    position: center;
    flex-direction: column;
    height: 350px;
-   width: 300px;
    min-width: 250px;
    padding: 3rem;
    border-radius: 16px;
-   /*box-shadow: -1rem 0 3rem hsl(228, 76%, 45%);*/
+   box-shadow: -1rem 0 3rem hsl(228, 76%, 45%);
    transition: .2s;
 }
 
@@ -247,7 +255,7 @@
 }
 
 .card:not(:first-child) {
-   margin-left: -330px;
+   margin-left: -200px;
 }
 
 .grass2{
@@ -385,3 +393,11 @@
     background-position: left;
     background-color: #E0306A;
  } 
+
+ .ice2{
+   background: url(..\Images\watercard.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: left;
+   background-color: #3ad8ff;
+} 

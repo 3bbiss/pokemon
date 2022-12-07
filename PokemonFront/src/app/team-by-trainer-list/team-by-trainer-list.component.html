@@ -39,10 +39,13 @@
                 <div [ngClass]="getTypeCard(pokemon)">
                     <div><img class="pokemonCardImage" [src]="pokemon.pokemon_pics.front_default" /></div>
                     <br/>
-                    <div class="pokemonCardText">{{ pokemon.pokemon_name }}</div> 
-                    <div class="pokemonCardText">HP: {{ pokemon.hp }},</div>
-                    <div class="pokemonCardText">Height: {{ pokemon.height * 4 }}in, Weight: {{ pokemon.weight /4 }}lbs</div>
-                    <div class="pokemonCardText">{{ pokemon.type }}</div>
+                    <div class="pokemonCardText">
+                        <div >{{ pokemon.pokemon_name }}</div> 
+                        <div >HP: {{ pokemon.hp }},</div>
+                        <div >Height: {{ pokemon.height * 4 }}in,</div> 
+                        <div>Weight: {{ pokemon.weight /4 }}lbs</div>
+                        <div >Types: {{ pokemon.type }}</div>
+                    </div>
                 </div>  
             </div>
         </div>
