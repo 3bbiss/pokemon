@@ -179,9 +179,13 @@
 
  .pokemonCardImage{
    display: block;
-   margin-right: auto;
-   margin-left: 40%;
-   width: 65%;
+   width: 60%;
+   margin-left: 10%;
+}
+
+.pokemonCardText{
+   margin-top: 12px;
+   font-size: 20px;
 }
 
  .card-list{
@@ -285,7 +289,7 @@
  }
 
  .dragon2{
-    background: url(..\Images\dragontype.png);
+    background: url(..\Images\dragoncard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -293,7 +297,7 @@
  }
 
  .rock2{
-    background: url(..\Images\rocktype.png);
+    background: url(..\Images\fightingcard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -301,7 +305,7 @@
  }
 
  .poison2{
-    background: url(..\Images\poisontype.png);
+    background: url(..\Images\grasscard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -309,7 +313,7 @@
  }
 
  .ground2{
-    background: url(..\Images\groundtype.png);
+    background: url(..\Images\fightingcard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -317,7 +321,7 @@
  }
 
  .ghost2{
-    background: url(..\Images\ghosttype.png);
+    background: url(..\Images\psychiccard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -325,7 +329,7 @@
  }
 
  .electric2{
-    background: url(..\Images\electrictype.png);
+    background: url(..\Images\electriccard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -333,7 +337,7 @@
  }
 
  .flying2{
-    background: url(..\Images\flyingtype.png);
+    background: url(..\Images\normalcard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -341,7 +345,7 @@
  }
 
  .steel2{
-    background: url(..\Images\steeltype.png);
+    background: url(..\Images\steelcard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -365,7 +369,7 @@
  }
 
  .psychic2{
-    background: url(..\Images\psychictype.png);
+    background: url(..\Images\psychiccard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -373,7 +377,7 @@
  }
 
  .fighting2{
-    background: url(..\Images\fightingtype.png);
+    background: url(..\Images\fightingcard.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
