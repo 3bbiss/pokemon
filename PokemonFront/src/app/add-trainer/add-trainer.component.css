@@ -73,8 +73,11 @@ input[type=text], select, textarea {
    text-align: center;
    color: black;
    font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Press Start 2P', cursive;
    height: auto;
-   padding: 5%;
+   padding: 30px;
+   text-decoration: underline;
 }
  
  .center {

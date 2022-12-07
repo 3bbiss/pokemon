@@ -1,7 +1,13 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<hr/>
 <div>
     <div class="rsvpform">
-        <h1>Become A Pokemon Trainer!</h1>
-        <hr/>
+        <h1>Pokemon Trainer Registration</h1>
+
     </div>
 
     <div>
@@ -12,7 +18,8 @@
 
                 <div class="inline qtr"><label for="trainerEmail">Trainer Email:</label></div>
                 <div class="three-qtr inline"><input type="text" [(ngModel)]="newTrainer.email"/></div><br/>
-                <button routerLink="/trainers" (click)="save(newTrainer)">Save Trainer</button>
+                <br/>
+                <button routerLink="/trainers" class="button-33" (click)="save(newTrainer)">Save Trainer</button>
             </div>
         </div> 
     </div>

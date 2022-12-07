@@ -7,9 +7,14 @@ body {
 }
 
 .listHeader{
-    background-color: #5D9E91;
-    padding-top: 2rem;
-    font-size: 22px;
+   text-align: center;
+   color: black;
+   font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Press Start 2P', cursive;
+   height: auto;
+   padding: 30px;
+   text-decoration: underline;
 }
 
 .card-list{

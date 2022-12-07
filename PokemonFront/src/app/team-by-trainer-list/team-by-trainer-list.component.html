@@ -1,23 +1,29 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 
+<hr/>
   
     <div class="container" *ngIf="!viewTeamOn && !editMode">
-        <br>
-        Select A Trainer:
+        <div class="rsvpform">
+            <h1>{{ this.trainer.name }}'s Pokémon</h1>
+        </div>
+        Choose Your Trainer!
         <select #trainerSelect (change)="GetTrainerTeams(trainerSelect.value)">
             <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
         </select>
-        <br>
-        <div class="container">
-            <h2>{{ this.trainer.name }}'s Pokemon</h2>
-        </div>
-
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <table>
             <tr>
                 <div *ngFor="let team of teamList">
-                    <td><div><button class="trainerTeamName" (click)="viewTeam(team.team_id)">{{ team.team_name }}</button></div>
+                    <td><div><button class="trainerTeamName button-team " (click)="viewTeam(team.team_id)">Team {{ team.team_name }}</button></div>
                     </td>
                     <ng-container class="trainerTeamPokemon">
                         <ng-container *ngFor="let pokemon of team.pokemon">
@@ -49,14 +55,14 @@
                 </div>  
             </div>
         </div>
-        <button (click)="updateTeamOn(team.team_id)">Edit Team</button>
-        <button (click)="delete(team)">Delete</button>
-        <button (click)="cancel()">Back</button> 
+        <button class="button-33" (click)="updateTeamOn(team.team_id)">Edit Team</button>
+        <button class="button-33" (click)="delete(team)">Delete</button>
+        <button class="button-33" (click)="cancel()">Back</button> 
     </div>
     
         <div *ngIf="editMode && viewTeamOn">
             <app-team-details [team]="team" (update)="update($event)"></app-team-details>
-            <button (click)="cancel()">Cancel</button>
+            <button class="button-33" (click)="cancel()">Cancel</button>
         </div>
     
 
