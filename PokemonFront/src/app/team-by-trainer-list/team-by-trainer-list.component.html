@@ -3,14 +3,14 @@
 </head>
 
   
-    <div *ngIf="!viewTeamOn && !editMode">
+    <div class="container" *ngIf="!viewTeamOn && !editMode">
         <br>
         Select A Trainer:
         <select #trainerSelect (change)="GetTrainerTeams(trainerSelect.value)">
             <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
         </select>
         <br>
-        <div>
+        <div class="container">
             <h2>{{ this.trainer.name }}'s Pokemon</h2>
         </div>
 

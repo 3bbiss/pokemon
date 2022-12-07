@@ -1,17 +1,18 @@
 /* Trainer Info */
 .TrnInfo{
    display: flex;
-   margin-top: 6rem;
+   margin-top: 10rem;
    margin-bottom: 3rem;
    justify-content: center;
-   font-size: 18px;
-   white-space: nowrap;
+   font-size: 13px;
+   color: black;
+   /* white-space: nowrap; */
 }
 
 
 /* Trainer Buttons */
 .Tbtns{
-   margin-top: 26rem;
+   margin-top: 22rem;
 }
 
 /* Edit Trainer Info Button */
@@ -48,9 +49,6 @@
    border-radius: 3px;
 }
 
-.editTrn{
-
-}
 
 /* Edit Trainer Inputs */
 .EditTrnInput{
@@ -59,7 +57,7 @@
    margin-top: 6rem;
    padding-left: 2rem;
    justify-content: left;
-   font-size: 18px;
+   font-size: 13px;
 }
 
 
