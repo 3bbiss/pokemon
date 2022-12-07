@@ -1,22 +1,25 @@
 <div>
 
     <div *ngIf="!editMode">
-        Trainer: {{trainer.name}} <br/>
-        Email: {{trainer.email}} <br/>
-        ID: {{trainer.id}} <br/>
-        <button (click)="goToEdit()">Edit Trainer Info</button>
-        <button (click)="deleteMe()">Delete Trainer</button> <br/> <br/>
+        <div class="TrnInfo">
+            Trainer: {{trainer.name}} <br/> <br/>
+            Email: {{trainer.email}} <br/>
+        </div>
+        <div class="Tbtns">
+            <button class="TGE" (click)="goToEdit()">Edit Trainer Info</button>
+            <button class="TD" (click)="deleteMe()">Delete Trainer</button> <br/> <br/>
+        </div>
     </div>
 
-    <div class="container center" *ngIf="editMode">
-        <div class="block">
-            <div class="inline qtr"><label for="editName">Trainer Name:</label></div>
-            <div class="three-qtr inline"><input type="text" [(ngModel)]="editName"/></div>
+    <div *ngIf="editMode">
+        <div class="editTrn">
+            <div class="EditTrnInput">Trainer: <input type="text" [(ngModel)]="editName"/></div>
             
-            <div class="inline qtr"><label for="editEmail">Trainer Email:</label></div>
-            <div class="three-qtr inline"><input type="text" [(ngModel)]="editEmail"/></div>
-            <button (click)="saveEdit()">Save Edits</button>
-            <button (click)="cancelEdit()">Cancel Edits</button>
+            <div class="EditTrnInput">Email:<input type="text" [(ngModel)]="editEmail"/></div>
+            <div class="TEbtns">
+                <button class="TSE" (click)="saveEdit()">Save Edits</button>
+                <button class="TCE"(click)="cancelEdit()">Cancel Edits</button>
+            </div>
         </div>
     </div>
 </div>

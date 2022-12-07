@@ -1,41 +1,72 @@
-/* Style inputs, select elements and textareas */
-input[type=text], select, textarea {
-    width: 30%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    position: relative;
- }
- 
- /* Style the label to display next to the inputs */
- label {
-    padding: 12px 12px 12px 0;
- }
- 
- /* Style the submit button */
- input[type=submit] {
-    background-color:cornflowerblue;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
- }
- 
- /* Style the container */
- .container {
-    border-radius: 5px;
-    opacity:0.9;
-    background-color:darkseagreen;
-    padding:15px;
-    max-width: 30%;
- }
+/* Trainer Info */
+.TrnInfo{
+   display: flex;
+   margin-top: 6rem;
+   margin-bottom: 3rem;
+   justify-content: center;
+   font-size: 18px;
+   white-space: nowrap;
+}
+
+
+/* Trainer Buttons */
+.Tbtns{
+   margin-top: 26rem;
+}
+
+/* Edit Trainer Info Button */
+.TGE{
+   margin-right: 12px;
+   font-size: 14px;
+   border-radius: 3px;
+}
+
+/* Delete Trainer Button */
+.TD{
+   font-size: 14px;
+   border-radius: 3px;
+}
+
+/* Trainer Edit Buttons*/
+.TEbtns{
+   padding-top: 22rem;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Trainer Save Edit Button*/
+.TSE{
+   margin-right: 12px;
+   font-size: 14px;
+   border-radius: 3px;
+}
+
+/* Trainer Cancel Edit Button */
+.TCE{
+   font-size: 14px;
+   border-radius: 3px;
+}
+
+.editTrn{
+
+}
+
+/* Edit Trainer Inputs */
+.EditTrnInput{
+   width: 1rem;
+   display: flex;
+   margin-top: 6rem;
+   padding-left: 2rem;
+   justify-content: left;
+   font-size: 18px;
+}
+
+
+input[type="text"] {
+   font-size:16px;
+}
+
  
  @media only screen and (max-width: 720px) {
    .container {
@@ -44,25 +75,7 @@ input[type=text], select, textarea {
  }
  }
  
- /* Floating column for labels: 25% width */
- .col-25 {
-    width: 15%;
-    margin-top: 6px;
- }
- 
- /* Floating column for inputs: 75% width */
- .col-75 {
-    width: 30%;
-    margin-top: 6px;
- }
- 
- /* Clear floats after the columns */
- .row:after {
-    content: "";
-    display: table;
-    clear: both;
- }
- 
+
  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
  @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
@@ -71,36 +84,13 @@ input[type=text], select, textarea {
     }
  }
  
- .rsvpform {
-    text-align: center;
-    background-color:darkseagreen;
-    opacity: .8;
-    color: black;
-    font-weight: bold;
-    height: 150px;
-    padding: 50px;
- }
- 
- .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
- 
-  .inline { 
-   display: inline-block;
- }
- 
+
  @media only screen and (max-width: 720px) {
    .inline { 
       display:block;
    }
  }
- 
- .qtr {
-   width: 25%;
- }
+
  
  @media only screen and (max-width: 720px) {
    .qtr {
@@ -108,22 +98,13 @@ input[type=text], select, textarea {
  }
  }
  
- .three-qtr {
-   width: 75%;
-   text-align: center;
- }
- 
+
  @media only screen and (max-width: 720px) {
    .three-qtr {
    width: 100%;
  }
  }
  
- .block {
-   display: block;
- }
- 
- select, input[type=text] { width: 70%;}
  
  @media only screen and (max-width: 720px) {
    select, input[type=text] { 
