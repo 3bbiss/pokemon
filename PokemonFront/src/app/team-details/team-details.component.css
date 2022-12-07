@@ -31,10 +31,8 @@ input[type=text], select, textarea {
  /* Style the container */
  .container {
     border-radius: 5px;
-    opacity:0.9;
-    background-color:darkseagreen;
     padding:15px;
-    max-width: 30%;
+    width: auto;
  }
 
  @media only screen and (max-width: 720px) {
@@ -73,12 +71,11 @@ input[type=text], select, textarea {
  
  .rsvpform {
     text-align: center;
-    background-color:darkseagreen;
-    opacity: .8;
     color: black;
     font-weight: bold;
-    height: 150px;
-    padding: 50px;
+    height: auto;
+    padding: 20px;
+    font-family: 'Press Start 2P', cursive;
  }
 
  .center {

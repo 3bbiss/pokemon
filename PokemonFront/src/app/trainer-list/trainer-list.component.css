@@ -3,11 +3,11 @@ body {
     padding: 0;
     margin: 0;
     background-color: #17141d;
-    color: white;
-    font-family: 'DM Mono', monospace;
+    color: rgb(0, 0, 0);
 }
 
 .listHeader{
+    background-color: #5D9E91;
     padding-top: 2rem;
     font-size: 22px;
 }
@@ -16,6 +16,7 @@ body {
     display: flex;
     padding: 3rem;
     overflow-x: scroll;
+    background-color: #5D9E91;
 }
 
 .card-list::-webkit-scrollbar{
@@ -44,7 +45,7 @@ body {
     /* border: solid #F18884; */
     border-radius: 16px;
     background: url(..\Images\trainercard2.png);
-    background-color: rgb(39, 151, 99);
+    background-color: #AFABAB;
     /* background: #5D9E91; */
     box-shadow: -1rem 0 3rem #F18884;
 
