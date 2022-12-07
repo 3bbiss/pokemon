@@ -76,7 +76,8 @@ input[type=submit] {
    font-family: 'Montserrat', sans-serif;
    font-family: 'Press Start 2P', cursive;
    height: auto;
-   padding: 20px;
+   padding: 30px;
+   text-decoration: underline;
 }
 
 .center {
