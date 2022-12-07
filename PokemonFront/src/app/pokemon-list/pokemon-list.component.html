@@ -3,8 +3,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="font" style="font-size: larger; margin: 20px">Kanto Pokedex</div>
+
+<div><div class="font" style="font-size: larger; margin: 20px;">Kanto Pokedex</div>
 <ng-container *ngIf="!showdetails">
 
     <div class="bubble flex">
@@ -56,7 +56,6 @@
     </div>
   </ng-container>  
 </div>
-</body>
 
 
 
@@ -79,3 +78,113 @@
   </div>
 </ng-template>
  -->
+
+
+ 
+<!-- <head>
+  <link rel="stylesheet" href="style.css">
+  <title>Title of the document</title>
+</head>
+ -->
+
+
+      <div class="pokedex">
+
+          <div class="flex">
+              <button class="screen-buttons"
+                  style="width: 65px; height: 65px; background: rgb(14, 207, 233); border: 8px lightblue solid"></button>
+              <button class="screen-buttons" style="width: 20px; height: 20px;"></button>
+              <button class="screen-buttons" style="width: 20px; height: 20px; background:yellow;"></button>
+              <button class=" screen-buttons" style="width: 20px; height: 20px; background:green;"></button>
+          </div>
+          <hr style="border:  rgb(182, 0, 55) solid 5px; margin: 0px -45px 50px;">
+
+          <div class="outer-screen">
+              <div class="flex center">
+                  <button class="screen-buttons"></button>
+                  <button class="screen-buttons"></button>
+              </div>
+              <div class="screen">
+                  <div class="flex gap space-between">
+                      <div class="half center text-center">
+
+                          <img src="assets/pokemon-egg.png">
+                          <div class="name">
+                              <h2>Pokemon</h2>
+                          </div>
+
+                          <div class="flex space-between">
+                              <div class="half">
+                                  <p class="p-margin"><strong>Class:</strong> Water</p>
+                              </div>
+                              <div class="half">
+                                  <p class="p-margin"><strong>Age:</strong> 4 months</p>
+                              </div>
+                          </div>
+
+                          <div class="flex space-between">
+                              <div class="half">
+                                  <p class="p-margin"><strong>Weight:</strong> 123 lbs</p>
+                              </div>
+                              <div class="half">
+                                  <p class="p-margin"><strong>Height:</strong> 4'5"</p>
+                              </div>
+                          </div>
+
+
+                      </div>
+
+                      <div class="half">
+                          <strong>Description:</strong> Lorem ipsum dolor sit amet,
+                          consectetur
+                          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          Quam
+                          adipiscing vitae proin sagittis nisl rhoncus. Massa tempor nec feugiat nisl pretium
+                          fusce id velit ut. Enim praesent elementum facilisis leo vel fringilla est. Dictum
+                          sit
+                          amet justo donec enim diam vulputate. Habitasse platea dictumst vestibulum rhoncus
+                          est
+                          pellentesque elit ullamcorper. Pulvinar mattis nunc sed blandit libero volutpat sed
+                          cras. Vel quam elementum pulvinar etiam non quam. Varius sit amet mattis vulputate
+                          enim
+                          nulla aliquet porttitor lacus. Bibendum enim facilisis gravida neque convallis a
+                          cras.
+                          Varius vel pharetra vel turpis nunc.
+
+
+                      </div>
+                  </div>
+
+              </div>
+              <div class="flex space-between">
+                  <button class="screen-buttons" style="width: 25px; height: 25px;"></button>
+                  <div class="hamburger">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                  </div>
+              </div>
+          </div>
+          <div class="flex flex-end gap">
+              <div class="three-qtr">
+                  <div class="flex center-align">
+                      <button class="screen-buttons"
+                          style="width: 45px; height: 45px; background: rgb(14, 29, 233);"><strong
+                              style="color: rgb(86, 86, 255); font-size: 20pt; font-weight: 900;">X</strong></button>
+                      <button class="long-buttons" style="background: green;"></button>
+                      <button class="long-buttons" style="background: red;"></button>
+                  </div>
+                  <div class="display-name border">
+                      Bulbasaur
+                  </div>
+              </div>
+              <div class="fifth flex center-align gap">
+                  <button class="arrow-buttons"><strong>
+                          < </strong></button>
+                  <button class="arrow-buttons"><strong>></strong></button>
+              </div>
+          </div>
+      </div>
+    </div>
+
