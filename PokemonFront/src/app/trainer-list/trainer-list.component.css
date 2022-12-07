@@ -7,11 +7,15 @@ body {
     font-family: 'DM Mono', monospace;
 }
 
+.listHeader{
+    padding-top: 2rem;
+    font-size: 22px;
+}
+
 .card-list{
     display: flex;
     padding: 3rem;
     overflow-x: scroll;
-    
 }
 
 .card-list::-webkit-scrollbar{
@@ -20,7 +24,7 @@ body {
 }
 
 .card-list::-webkit-scrollbar-thumb{
-    background: #de0f1d;
+    background: #F18884;
     border-radius: 10px;
     box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
 }
@@ -37,10 +41,10 @@ body {
     width: 400px;
     min-width: 250px;
     padding: 3rem;
-
+    border: solid #F18884;
     border-radius: 16px;
-    background: #856bba;
-    box-shadow: -1rem 0 3rem hsl(228, 76%, 45%);
+    background: #5D9E91;
+    box-shadow: -1rem 0 3rem #F18884;
 
     transition: .2s;
 }

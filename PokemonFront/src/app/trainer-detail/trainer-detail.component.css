@@ -1,3 +1,4 @@
+/* Trainer Info */
 .TrnInfo{
    display: flex;
    margin-top: 4rem;
@@ -7,18 +8,26 @@
    white-space: nowrap;
 }
 
+
+/* Trainer Buttons */
 .Tbtns{
    margin-top: 14rem;
 }
 
+/* Edit Trainer Info Button */
 .TGE{
    margin-right: 12px;
+   font-size: 14px;
+   border-radius: 3px;
 }
 
+/* Delete Trainer Button */
 .TD{
-
+   font-size: 14px;
+   border-radius: 3px;
 }
 
+/* Trainer Edit Buttons*/
 .TEbtns{
    padding-top: 13.2rem;
    display: flex;
@@ -26,38 +35,33 @@
   align-items: center;
 }
 
+/* Trainer Save Edit Button*/
 .TSE{
    margin-right: 12px;
+   font-size: 14px;
+   border-radius: 3px;
 }
 
+/* Trainer Cancel Edit Button */
 .TCE{
-
+   font-size: 14px;
+   border-radius: 3px;
 }
 
-
+/* Edit Trainer Inputs */
 .EditTrnInput{
    width: 1rem;
    display: flex;
    margin-top: 3rem;
    justify-content: left;
+   font-size: 18px;
 }
-
 
 
 input[type="text"] {
    font-size:16px;
 }
 
-.TrnEmailInput{
-
-}
-
-
-.TEbtn{
-   display: flex;
-   margin-top: 1rem;
-}
- 
  
  @media only screen and (max-width: 720px) {
    .container {
