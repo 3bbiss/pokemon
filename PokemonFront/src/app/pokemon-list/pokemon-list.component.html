@@ -21,7 +21,7 @@
     
 
 
-<div class="bubble dex">
+<!-- <div class="bubble dex">
   <ng-container *ngIf="showdetails">
     <div class="pokeball">
       <img  class="center" style="width: 15%; height: auto;" [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
@@ -36,7 +36,7 @@
       <!--We are already getting the pokemon within the for loop
       but to just display the type we use the types from the list then the object it's coming from (type)
       and the property we want from type (name)-->
-      <ng-container *ngFor="let types of this.pokemon.types">
+      <!-- <ng-container *ngFor="let types of this.pokemon.types">
         {{types.type.name}}
       </ng-container>
     <br/>
@@ -52,14 +52,16 @@
       <button class="button-33" role="button" (click)="cancel()">Cancel</button>
     </div>
   </ng-container>  
-</div>
+</div> --> -->
 
+<ng-container *ngIf="showdetails">
 
+<div class="container">
       <div class="pokedex">
 
           <div class="flex">
               <button class="screen-buttons"
-                  style="width: 65px; height: 65px; background: rgb(14, 207, 233); border: 8px lightblue solid"></button>
+                  style="border: 2px solid black; width: 65px; height: 65px; background: rgb(14, 207, 233); border: 8px lightblue solid; "></button>
               <button class="screen-buttons" style="width: 20px; height: 20px;"></button>
               <button class="screen-buttons" style="width: 20px; height: 20px; background:yellow;"></button>
               <button class=" screen-buttons" style="width: 20px; height: 20px; background:green;"></button>
@@ -75,50 +77,55 @@
                   <div class="flex gap space-between">
                       <div class="half center text-center">
 
-                          <img src="assets/pokemon-egg.png">
-                          <div class="name">
-                              <h2>Pokemon</h2>
+                        
+
+                            <!-- Dex Screen Start -->
+                        <ng-container class="name dex" *ngIf="showdetails">
+                            <!-- <div class="name dex"> -->
+                                <div class="pokeball">
+                                  <img  class="center" style="width: 35%; height: auto;" [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
+                                </div>    
+                            
+                                <div class="center dex">
+                                  {{this.pokemon.name}} <br>
+                                <br/>
+                                </div>
+                                
+                               
+                            <!-- </div> -->
+                        </ng-container>
+
+                          <div class="flex space-between dex">
+                              <div class="half">
+                                  <p class="p-margin"><strong>Height: {{this.pokemon.height / 10}}m<br></strong></p>
+                              </div>
+                              <div class="half">
+                                  <p class="p-margin"><strong>Weight: {{this.pokemon.weight / 4}} lbs<br></strong></p>
+                              </div>
                           </div>
 
-                          <div class="flex space-between">
+                          <div class="flex space-between dex">
                               <div class="half">
-                                  <p class="p-margin"><strong>Class:</strong> Water</p>
+                                  <p class="p-margin" style="text-align: center;"><strong>
+                                    Types: 
+                                    <ng-container *ngFor="let types of this.pokemon.types">
+                                        {{types.type.name}}
+                                      </ng-container>
+                                  </strong></p>
                               </div>
                               <div class="half">
-                                  <p class="p-margin"><strong>Age:</strong> 4 months</p>
-                              </div>
-                          </div>
-
-                          <div class="flex space-between">
-                              <div class="half">
-                                  <p class="p-margin"><strong>Weight:</strong> 123 lbs</p>
-                              </div>
-                              <div class="half">
-                                  <p class="p-margin"><strong>Height:</strong> 4'5"</p>
+                                  <!-- Another stat -->
                               </div>
                           </div>
 
 
                       </div>
 
-                      <div class="half">
-                          <strong>Description:</strong> Lorem ipsum dolor sit amet,
-                          consectetur
-                          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                          Quam
-                          adipiscing vitae proin sagittis nisl rhoncus. Massa tempor nec feugiat nisl pretium
-                          fusce id velit ut. Enim praesent elementum facilisis leo vel fringilla est. Dictum
-                          sit
-                          amet justo donec enim diam vulputate. Habitasse platea dictumst vestibulum rhoncus
-                          est
-                          pellentesque elit ullamcorper. Pulvinar mattis nunc sed blandit libero volutpat sed
-                          cras. Vel quam elementum pulvinar etiam non quam. Varius sit amet mattis vulputate
-                          enim
-                          nulla aliquet porttitor lacus. Bibendum enim facilisis gravida neque convallis a
-                          cras.
-                          Varius vel pharetra vel turpis nunc.
-
-
+                      <div class="half dex"> &nbsp; 
+                        <br><br><br><br>
+                          <strong>
+                            {{this.pokeSpecies.flavor_text_entries[1].flavor_text}}
+                        </strong>
                       </div>
                   </div>
 
@@ -135,23 +142,23 @@
           </div>
           <div class="flex flex-end gap">
               <div class="three-qtr">
-                  <div class="flex center-align">
+                  <div class="flex center-align">  <!-- Buttons -->
                       <button class="screen-buttons"
-                          style="width: 45px; height: 45px; background: rgb(14, 29, 233);"><strong
-                              style="color: rgb(86, 86, 255); font-size: 20pt; font-weight: 900;">X</strong></button>
+                      class="button-33" role="button" (click)="cancel()">Cancel</button>
                       <button class="long-buttons" style="background: green;"></button>
                       <button class="long-buttons" style="background: red;"></button>
                   </div>
-                  <div class="display-name border">
-                      Bulbasaur
+                  <div class="display-name border dex">
+                    {{this.pokemon.name}} 
                   </div>
               </div>
               <div class="fifth flex center-align gap">
-                  <button class="arrow-buttons"><strong>
-                          < </strong></button>
-                  <button class="arrow-buttons"><strong>></strong></button>
+                <button class="button-33" role="button" (click)="previousText(this.pokeSpecies.id)"  (click)="previous(this.pokemon.id)">Previous</button>
+                <button class="button-33" role="button" (click)="nextText(this.pokeSpecies.id)" (click)="next(this.pokemon.id)">Next</button> <br><br>
               </div>
           </div>
       </div>
+    
     </div>
+</ng-container>
 
