@@ -31,8 +31,6 @@ input[type=submit] {
 /* Style the container */
 .container {
    border-radius: 5px;
-   opacity:0.9;
-   background-color:darkseagreen;
    padding:15px;
    max-width: 30%;
 }
@@ -73,12 +71,10 @@ input[type=submit] {
 
 .rsvpform {
    text-align: center;
-   background-color:darkseagreen;
-   opacity: .8;
    color: black;
    font-weight: bold;
-   height: 150px;
-   padding: 50px;
+   height: auto;
+   padding: 5%;
 }
 
 .center {
