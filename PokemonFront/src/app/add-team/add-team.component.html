@@ -3,10 +3,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-    
+<hr />
     <div class="rsvpform">
-        <h1>Create A New Pokemon Team!</h1>
-        <hr />
+        <h1>Build Your Pokémon Team</h1>
+
     </div>
     
     <div>
@@ -28,7 +28,7 @@
     
             <div class="block">
                 <div class="inline qtr">
-                    <label for="pokemon1"> Pokemon 1: </label>
+                    <label for="pokemon1"> Pokémon 1: </label>
                 </div>
                 <div class="three-qtr inline">
                     <select [(ngModel)]="firstPokemon">
@@ -39,7 +39,7 @@
     
             <div class="block">
                 <div class="inline qtr">
-                    <label for="pokemon2"> Pokemon 2: </label>
+                    <label for="pokemon2"> Pokémon 2: </label>
                 </div>
                 <div class="three-qtr inline">
                     <select [(ngModel)]="secondPokemon">
@@ -50,7 +50,7 @@
      
             <div class="block">
                 <div class="inline qtr">
-                    <label for="pokemon3"> Pokemon 3: </label>
+                    <label for="pokemon3"> Pokémon 3: </label>
                 </div>
                 <div class="three-qtr inline">
                     <select [(ngModel)]="thirdPokemon">
@@ -61,7 +61,7 @@
         
             <div class="block">
                 <div class="inline qtr">
-                    <label for="pokemon4"> Pokemon 4: </label>
+                    <label for="pokemon4"> Pokémon 4: </label>
                 </div>
                 <div class="three-qtr inline">
                     <select [(ngModel)]="fourthPokemon">
@@ -72,7 +72,7 @@
     
             <div class="block">
                 <div class="inline qtr">
-            <label for="pokemon5"> Pokemon 5: </label>
+            <label for="pokemon5"> Pokémon 5: </label>
             </div>
                 <div class="three-qtr inline">
                     <select [(ngModel)]="fifthPokemon">
@@ -83,7 +83,7 @@
     
             <div class="block">
                 <div class="inline qtr">
-            <label for="pokemon6"> Pokemon 6: </label>
+            <label for="pokemon6"> Pokémon 6: </label>
             </div>
                 <div class="three-qtr inline">
                     <select [(ngModel)]="sixthPokemon">
@@ -91,7 +91,7 @@
                     </select><br/>
                 </div>
             </div>
-            <div class="container center"><button routerLink="/trainerteams" (click)="saveIt()">Save</button></div>
+            <div class="container center"><button routerLink="/trainerteams" class="button-33" (click)="saveIt()">Save</button></div>
             
         </div>
         </div>

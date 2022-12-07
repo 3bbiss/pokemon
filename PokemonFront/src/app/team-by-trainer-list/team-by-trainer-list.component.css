@@ -4,18 +4,31 @@
    width: auto;
 } 
 
+.rsvpform {
+   text-align: center;
+   color: black;
+   font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Press Start 2P', cursive;
+   height: auto;
+   padding: 30px;
+   text-decoration: underline;
+}
+
  .trainerTeamName{
     border: 1px solid black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fredoka One', cursive;
     font-size: 18px;
     width: auto;
     height: 100%;
     border-radius: 8px;
+    background: #427f73
  }
 
  .trainerTeamName:hover{
-    background-color:#5B5466;
-    box-shadow:  0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #DEF1EF;
+    box-shadow:  0 12px 16px 0 #DEF1EF, #DEF1EF;
+    
  }
 
  .trainerTeamPokemon{
@@ -38,9 +51,8 @@
     font-family: 'Press Start 2P', cursive;
     font-size: 12px;
     display: flex;
-
+    font-weight: 1000;
     flex-wrap: wrap;
-  
     justify-content: center;
   }
 
