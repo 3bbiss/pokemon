@@ -3,6 +3,11 @@
     font-family: 'Fredoka One', cursive;
     font-size: 120%
 }
+.retrofont {
+    font-family: 'Montserrat', sans-serif;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 75%;
+}
 html {
     /* font-family: 'Fredoka One', cursive; */
         font-family: 'Montserrat', sans-serif;

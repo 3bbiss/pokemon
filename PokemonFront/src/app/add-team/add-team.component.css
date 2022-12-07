@@ -73,6 +73,9 @@ input[type=submit] {
    text-align: center;
    color: black;
    font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Press Start 2P', cursive;
+   font-size: 75%;
    height: auto;
    padding: 5%;
 }
