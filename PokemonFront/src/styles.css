@@ -3,6 +3,11 @@
     font-family: 'Fredoka One', cursive;
     font-size: 120%
 }
+.retrofont {
+    font-family: 'Montserrat', sans-serif;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 75%;
+}
 html {
     /* font-family: 'Fredoka One', cursive; */
         font-family: 'Montserrat', sans-serif;
@@ -51,13 +56,16 @@ body {
     transform: scale(1.10);
   }
 
-  .bubbleblue {
-    background-color: rgb(208, 238, 255);
+  .bubbleMain {
+    background-color: #5D9E91;
+    /*#5D9E91*/
+    /*#DEF1EF*/
+    /*#ACD7A8*/
+    /*#F18884*/
     outline-offset: 5px;
-    border: 3px solid white;
-    border-color: rgb(185, 229, 255);
+    border-color: rgb(201, 249, 228);
     border-radius: 10px;
-    margin: 80px;
-    padding: 25px;
+    margin-right: 150px;
+    margin-left: 150px;
     opacity: .8;
-  }
+ }
