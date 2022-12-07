@@ -4,10 +4,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
-<div><div class="font" style="font-size: larger; margin: 20px;">Kanto Pokedex</div>
+<div class="bubble">
+<div><div class="font" style="font-size: 200%; margin: 60px;">Kanto Pokedex</div>
 <ng-container *ngIf="!showdetails">
 
-    <div class="bubble flex">
+    <div class="flex">
     
       <div *ngFor="let pokemon of pokemonList" class="pokemon">
               <div class="pokeball">
@@ -16,43 +17,9 @@
              <button (click)="getSpecies(this.pokemon.id)" (click)="showPoke(this.pokemon.id)" class="button-33 font" role="button">{{ pokemon.name }}</button>
       </div>
   
-</div>
+    </div>
+
 </ng-container>
-    
-
-
-<!-- <div class="bubble dex">
-  <ng-container *ngIf="showdetails">
-    <div class="pokeball">
-      <img  class="center" style="width: 15%; height: auto;" [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
-    </div>    
-
-    <div class="center">
-      Name: {{this.pokemon.name}} <br>
-      Height: {{this.pokemon.height / 10}}m<br>
-      Weight: {{this.pokemon.weight / 4}} lbs<br>
-
-      Type:
-      <!--We are already getting the pokemon within the for loop
-      but to just display the type we use the types from the list then the object it's coming from (type)
-      and the property we want from type (name)-->
-      <!-- <ng-container *ngFor="let types of this.pokemon.types">
-        {{types.type.name}}
-      </ng-container>
-    <br/>
-
-      Description:
-      {{this.pokeSpecies.flavor_text_entries[1].flavor_text}}
-      
-    </div>
-    
-    <div class="centerbuttons">
-      <button class="button-33" role="button" (click)="previousText(this.pokeSpecies.id)"  (click)="previous(this.pokemon.id)">Previous</button>
-      <button class="button-33" role="button" (click)="nextText(this.pokeSpecies.id)" (click)="next(this.pokemon.id)">Next</button> <br><br>
-      <button class="button-33" role="button" (click)="cancel()">Cancel</button>
-    </div>
-  </ng-container>  
-</div> --> -->
 
 <ng-container *ngIf="showdetails">
 

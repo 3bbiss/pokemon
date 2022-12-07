@@ -36,13 +36,14 @@
   }
   
   .bubble {
-      background-color: rgb(234, 255, 249);
+      background-color: rgb(208, 238, 255);
       outline-offset: 5px;
       border: 3px solid white;
-      border-color: rgb(201, 249, 228);
+      border-color: rgb(185, 229, 255);
       border-radius: 10px;
       margin: 60px;
       padding: 25px;
+      opacity: .8;
   }
   
   .center {
