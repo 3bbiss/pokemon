@@ -37,13 +37,15 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    height: 350px;
-    width: 400px;
-    min-width: 250px;
+    height: 520px;
+    /* width: 350px; */
+    min-width: 330px;
     padding: 3rem;
-    border: solid #F18884;
+    /* border: solid #F18884; */
     border-radius: 16px;
-    background: #5D9E91;
+    background: url(..\Images\trainercard2.png);
+    background-color: rgb(39, 151, 99);
+    /* background: #5D9E91; */
     box-shadow: -1rem 0 3rem #F18884;
 
     transition: .2s;
