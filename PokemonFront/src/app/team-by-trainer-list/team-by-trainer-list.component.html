@@ -3,7 +3,7 @@
 </head>
 
   
-    <div class="bubbleblue" *ngIf="!viewTeamOn && !editMode">
+    <div *ngIf="!viewTeamOn && !editMode">
         <br>
         Select A Trainer:
         <select #trainerSelect (change)="GetTrainerTeams(trainerSelect.value)">

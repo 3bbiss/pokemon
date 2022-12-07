@@ -185,8 +185,9 @@
 }
 
 .pokemonCardText{
-   margin-top: 12px;
-   font-size: 20px;
+   margin-top: 1px;
+   font-size: 10px;
+   
 }
 
  .card-list{
