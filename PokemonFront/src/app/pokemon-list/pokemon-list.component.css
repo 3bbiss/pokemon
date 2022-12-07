@@ -1,6 +1,3 @@
-body {
-    background-image: url(..\Images\bulbpaper.png);
-  }
   
   .button-33 {
     background-color: #c2fbd7;
@@ -107,9 +104,189 @@ body {
     justify-content: center;
   }
   
-  
-  
-  
+
+.poke-container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.pokedex {
+    margin: auto;
+    width: 100%;
+    background-color: rgb(233, 0, 70);
+    padding: 45px;
+    border-radius: 25px;
+    border: 2px black solid;
+}
+
+
+
+.outer-screen {
+    background-color: rgb(216, 216, 216);
+    padding: 0 50px;
+    border-radius: 15px;
+    position: relative;
+}
+
+@media only screen and (max-width: 820px) {
+    .flex {
+        display: block;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.center-align {
+    align-items: center;
+}
+
+
+
+.center {
+    justify-content: center;
+    margin: auto;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.wrap {
+    justify-content: space-evenly;
+}
+
+.half {
+    width: 47%;
+}
+
+
+
+
+@media only screen and (max-width: 820px) {
+    .half {
+        width: 100%;
+    }
+}
+
+.half img {
+    height: 100px;
+}
+
+.screen-buttons {
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.long-buttons {
+    width: 55px;
+    height: 15px;
+    border-radius:
+        10px;
+    margin: 15px;
+}
+
+.screen {
+    padding: 20px;
+    min-height: fit-content;
+    background-color: rgb(140, 150, 132);
+}
+
+.outer-screen:before {
+    content: '';
+    position: absolute;
+    border-top: 50px solid rgb(216, 216, 216);
+    border-left: 50px solid rgb(233, 0, 70);
+    left: 0;
+    bottom: 0;
+    width: 0;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+.hamburger {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 65px;
+    height: 50px;
+    margin: auto 0;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+.name {
+    display: block;
+}
+
+.three-qtr {
+    flex-grow: 3;
+}
+
+.fifth {
+    flex-grow: 1;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.display-name {
+    background-color: rgb(252, 255, 47);
+    padding: 15px;
+    max-width: 300px;
+    min-width: min-content;
+    border-radius: 10px;
+
+
+}
+
+.description {
+    background-color: grey;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+button {
+    border: 0;
+}
+
+.p-margin {
+    margin: 1px;
+}
+
+.arrow-buttons {
+    width: 85px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
   
   
   

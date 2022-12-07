@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">  
 </head>
 
-<body>
-    
+  
     <div *ngIf="!viewTeamOn && !editMode">
         <br>
         Select A Trainer:
@@ -25,13 +20,13 @@
                     <td><div><button class="trainerTeamName" (click)="viewTeam(team.team_id)">{{ team.team_name }}</button></div>
                     </td>
                     <ng-container class="trainerTeamPokemon">
-                    <ng-container *ngFor="let pokemon of team.pokemon">
-                        <td [ngClass]="getType(pokemon)">
-                            <span class="pokemonName" >{{ pokemon.pokemon_name }} </span>
+                        <ng-container *ngFor="let pokemon of team.pokemon">
+                            <td [ngClass]="getType(pokemon)">
+                                <span class="pokemonName" >{{ pokemon.pokemon_name }} </span>
                                     <img class="pokemonImage" [src]="pokemon.pokemon_pics.front_default" >
-                        </td>
+                            </td>
+                        </ng-container>
                     </ng-container>
-                </ng-container>
 
                 </div>
             </tr>
@@ -55,7 +50,6 @@
     <button (click)="delete(team)">Delete</button>
     <button (click)="cancel()">Back</button> 
 <div>
-
     <div *ngIf="editMode && viewTeamOn">
         <app-team-details [team]="team" (update)="update($event)"></app-team-details>
         <button (click)="cancel()">Cancel</button>
