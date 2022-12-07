@@ -1,4 +1,8 @@
-
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
     
     <div class="rsvpform">
         <h1>Create A New Pokemon Team!</h1>
@@ -8,13 +12,13 @@
     <div>
         <div class="container center">
             <div class="block">
-                <div class="inline qtr"><label for="teamName">Team Name:&nbsp;</label></div>
+                <div class="inline qtr"><label for="teamName">Team Name: </label></div>
                 <div class="three-qtr inline"><input type="text" [(ngModel)]="newTeam.team_name"></div>
             </div>
-        </div>
+        
         <div class="block">
             <div class="inline qtr">
-                <label for="trainerName">Trainer:&nbsp; &nbsp; &nbsp; &nbsp;</label>
+                <label for="trainerName">Trainer: </label>
             </div>
             <div class="three-qtr inline">
                 <select [(ngModel)]="newTeam.trainer_id">
@@ -87,7 +91,9 @@
                     </select><br/>
                 </div>
             </div>
-        <button routerLink="/trainerteams" (click)="saveIt()">Save</button>
+            <div class="container center"><button routerLink="/trainerteams" (click)="saveIt()">Save</button></div>
+            
+        </div>
         </div>
     </div>
 

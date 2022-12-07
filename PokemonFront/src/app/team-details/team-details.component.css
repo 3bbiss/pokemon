@@ -75,6 +75,7 @@ input[type=text], select, textarea {
     font-weight: bold;
     height: auto;
     padding: 20px;
+    font-family: 'Press Start 2P', cursive;
  }
 
  .center {
