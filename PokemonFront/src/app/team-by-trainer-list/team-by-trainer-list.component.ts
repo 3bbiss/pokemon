@@ -21,6 +21,10 @@ export class TeamByTrainerListComponent implements OnInit {
     trainer_name: '', pokemon: []
   };
 
+  trainer: Trainer = {
+    id: 0, name: '', email: ''
+  }
+
   viewTeamOn: boolean = false;
   editMode: boolean = false;
 
@@ -29,6 +33,7 @@ export class TeamByTrainerListComponent implements OnInit {
       (result: Trainer[]) => {
         this.trainerList = result;
         this.GetTrainerTeams(this.trainerList[0].id.toString());
+        this.trainer = this.trainerList[0];
       }
     );
   }
@@ -37,6 +42,7 @@ export class TeamByTrainerListComponent implements OnInit {
     this.TeamSrv.getAllTeamsbyTrainer(
       (result: Team[]) => {
         this.teamList = result;
+        this.trainer = this.trainerList.find(x => x.id == parseInt(id)) ?? this.trainer;
       },
       parseInt(id)
     )

@@ -1,0 +1,41 @@
+body{
+    background: url(..\Images\Homescreen.png);
+    width: 100;
+}
+
+html,body{
+    height: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.pokemonHeader{
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 30px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #3858AB;
+    -webkit-text-fill-color:#FBCC04;
+}
+.container{
+    background-color: lightgrey;
+    opacity: .6;
+}
+
+.pokemonTitle{
+    margin-left: 350px;
+    height: 100px;
+    width: 300px;
+}
+
+.welcomeText{
+    font-family: 'Press Start 2P', cursive;
+    width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}

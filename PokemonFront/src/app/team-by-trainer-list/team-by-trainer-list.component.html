@@ -11,9 +11,8 @@
         </select>
         <br>
         <div>
-            <h2>{{ this.team.trainer_name }}'s Pokemon Teams</h2>
+            <h2>{{ this.trainer.name }}'s Pokemon</h2>
         </div>
-
 
         <table>
             <tr>
@@ -29,30 +28,28 @@
                         </ng-container>
                     </ng-container>
 
-                    <!--<td><button (click)="viewTeam(team.team_id)"> View Team Details</button></td> -->
                 </div>
             </tr>
         </table>
     </div>
 
-
-
-    <div *ngIf="viewTeamOn && !editMode">
-        <div  class="card-list">
-            <div *ngFor="let pokemon of team.pokemon" class="card">
-                <div [ngClass]="getTypeCard(pokemon)">
-                    <div><img class="pokemonCardImage" [src]="pokemon.pokemon_pics.front_default" /></div>
-                    <div>{{ pokemon.pokemon_name }} HP: {{ pokemon.hp }}</div><br />
-                    <div>{{ pokemon.type }}</div>
-                </div>            
-            </div>
+<div *ngIf="viewTeamOn && !editMode">
+    <div  class="card-list">
+        <div *ngFor="let pokemon of team.pokemon" class="card">
+            <div [ngClass]="getTypeCard(pokemon)">
+                <div><img class="pokemonCardImage" [src]="pokemon.pokemon_pics.front_default" /></div>
+                <br/>
+                <div class="pokemonCardText">{{ pokemon.pokemon_name }}</div> 
+                <div class="pokemonCardText">HP: {{ pokemon.hp }},<div>
+                <div class="pokemonCardText">Height: {{ pokemon.height * 4 }}in, Weight: {{ pokemon.weight /4 }}lbs</div>
+                <div class="pokemonCardText">{{ pokemon.type }}</div>
+            </div>  
         </div>
-        <!-- Want this update to take us to new edit view -->
-        <button (click)="updateTeamOn(team.team_id)">Edit Team</button>
-        <button (click)="delete(team)">Delete</button>
-        <button (click)="cancel()">Back</button>
     </div>
-
+    <button (click)="updateTeamOn(team.team_id)">Edit Team</button>
+    <button (click)="delete(team)">Delete</button>
+    <button (click)="cancel()">Back</button> 
+<div>
     <div *ngIf="editMode && viewTeamOn">
         <app-team-details [team]="team" (update)="update($event)"></app-team-details>
         <button (click)="cancel()">Cancel</button>

@@ -6,7 +6,6 @@ import { PokemonSprites } from "../pokemon-sprites";
 import { SpeciesName } from "../species-name";
 import { Stats } from "../stats";
 import { Type } from "../type";
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-pokemon-detail',
