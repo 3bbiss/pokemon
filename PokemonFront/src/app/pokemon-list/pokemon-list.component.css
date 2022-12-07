@@ -111,6 +111,12 @@
     box-sizing: border-box;
 }
 
+.container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 
 
 .pokedex {
@@ -167,6 +173,7 @@
 
 .half {
     width: 47%;
+    /* height: 47%; */
 }
 
 
@@ -201,7 +208,9 @@
 .screen {
     padding: 20px;
     min-height: fit-content;
-    background-color: rgb(140, 150, 132);
+    background-color: rgb(176, 226, 255);
+    border: 2px solid black;
+    border-radius: 20px;
 }
 
 .outer-screen:before {
@@ -257,6 +266,7 @@
     padding: 15px;
     max-width: 300px;
     min-width: min-content;
+    border: 2px solid black;
     border-radius: 10px;
 
 
