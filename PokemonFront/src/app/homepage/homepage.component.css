@@ -1,7 +1,9 @@
 body{
+
     background-image:  url(..\Images\homepage3.png);
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
 html,body{
@@ -25,7 +27,9 @@ html,body{
 }
 .container{
     background-color: lightgrey;
+
     width: 53%;
+
 }
 
 .pokemonTitle{

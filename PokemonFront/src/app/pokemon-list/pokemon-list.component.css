@@ -88,6 +88,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    justify-content: center;
+    margin: auto;
   }
   
   .centerbuttons {
@@ -139,7 +141,6 @@
   .flex { 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
   }
   
 
@@ -149,17 +150,10 @@
     box-sizing: border-box;
 }
 
-.container {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 
 
 .pokedex {
     margin: auto;
-    width: 100%;
     background-color: rgb(233, 0, 70);
     padding: 45px;
     border-radius: 25px;
@@ -192,13 +186,6 @@
 
 .center-align {
     align-items: center;
-}
-
-
-
-.center {
-    justify-content: center;
-    margin: auto;
 }
 
 .space-between {
@@ -285,6 +272,8 @@
 
 .name {
     display: block;
+    margin-bottom: 15px;
+    font-size: 13pt;
 }
 
 .three-qtr {
@@ -321,8 +310,8 @@ button {
     border: 0;
 }
 
-.p-margin {
-    margin: 1px;
+.border {
+    outline: 5px solid rgb(6, 0, 46);
 }
 
 .arrow-buttons {
