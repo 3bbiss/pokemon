@@ -1,10 +1,12 @@
 body{
-    background: url(..\Images\Homescreen.png);
-    width: 100;
+    background-image:  url(..\Images\homepage3.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 html,body{
     height: 100%;
+    width: 100%;
 }
 
 .center {
@@ -23,7 +25,7 @@ html,body{
 }
 .container{
     background-color: lightgrey;
-    opacity: .6;
+    width: 53%;
 }
 
 .pokemonTitle{
@@ -34,8 +36,16 @@ html,body{
 
 .welcomeText{
     font-family: 'Press Start 2P', cursive;
-    width: 70%;
+    width: 80%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+}
+
+.welcome{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 200px;
+    display: flex;
 }
