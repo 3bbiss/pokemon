@@ -14,7 +14,7 @@
 
             <div *ngFor="let pokemon of pokemonList" class="pokemon">
                 <div class="pokeball">
-                    <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
+                    <img class="pokemonpic" [src]="pokemon.sprites.front_default" [alt]="pokemon.name" [title]="pokemon.name" />
                 </div>
                 <button (click)="getSpecies(this.pokemon.id)" (click)="showPoke(this.pokemon.id)" class="button-33 font"
                     role="button">{{ pokemon.name }}</button>
@@ -43,7 +43,7 @@
                         <div class="half center text-center">
                             <ng-container class="dex" *ngIf="showdetails">
                                 <div class="pokeball">
-                                    <img class="center" style="height: auto;" [src]="pokemon.sprites.front_default"
+                                    <img class="center jump" style="height: auto;" [src]="pokemon.sprites.front_default"
                                         [alt]="pokemon.name" [title]="pokemon.name" />
                                 </div>
                                 <div class="dex name">
@@ -72,7 +72,7 @@
 
                         <div class="half dex center">
                             <strong>
-                                {{this.pokeSpecies.flavor_text_entries[1].flavor_text}}
+                                {{this.pokeSpecies.flavor_text_entries[3].flavor_text}}
                             </strong>
                         </div>
                     </div>
