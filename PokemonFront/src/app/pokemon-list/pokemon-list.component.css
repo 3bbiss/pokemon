@@ -267,7 +267,7 @@ button {
 }
 
 .jump {
-    animation: jump 2s linear infinite;
+    animation: jump 1s linear infinite;
 }
 
 .pokemonpic {
@@ -275,7 +275,7 @@ button {
  height: auto;
 }
 .pokemonpic:hover {
-    animation: jump 2s linear infinite;
+    animation: jump 1s linear infinite;
 }
 
 @keyframes jump {
