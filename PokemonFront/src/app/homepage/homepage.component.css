@@ -1,5 +1,6 @@
 body{
     background: url(..\Images\Homescreen.png);
+    height: fit-content;
     width: 100;
 }
 
@@ -23,7 +24,7 @@ html,body{
 }
 .container{
     background-color: lightgrey;
-    opacity: .6;
+    /* opacity: .6; */
 }
 
 .pokemonTitle{
