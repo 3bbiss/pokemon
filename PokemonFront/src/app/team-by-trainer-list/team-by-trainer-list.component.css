@@ -200,8 +200,6 @@
    background-color: #3ad8ff;
 }
 
- /* Team details view as cards*/
-
  .pokemonCardImage{
    display: block;
    width: 60%;
@@ -236,19 +234,6 @@
 .card-list::-webkit-scrollbar-track{
    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
 }
-
-/* .card{
-   display: flex;
-   position: center;
-   flex-direction: column;
-   height: 550px;
-   width: 400px;
-   min-width: 250px;
-   padding: 3rem;
-   border-radius: 16px;
-   /*box-shadow: -1rem 0 3rem hsl(228, 76%, 45%);*/
-   /* transition: .2s;
-} */
 
 .cardType{
    display: flex;

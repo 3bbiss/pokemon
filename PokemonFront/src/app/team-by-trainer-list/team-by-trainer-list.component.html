@@ -20,10 +20,10 @@
         <br/>
         <br/>
         <br/>
-        <table>
+        <table style="display: flex; position:relative; left:120px">
             <tr>
                 <div *ngFor="let team of teamList">
-                    <td><div><button class="trainerTeamName button-team " (click)="viewTeam(team.team_id)">Team {{ team.team_name }}</button></div>
+                    <td><div><button class="trainerTeamName button-team " style="max-width: 100px;" (click)="viewTeam(team.team_id)">Team {{ team.team_name }}</button></div>
                     </td>
                     <ng-container class="trainerTeamPokemon">
                         <ng-container *ngFor="let pokemon of team.pokemon">
@@ -33,7 +33,6 @@
                             </td>
                         </ng-container>
                     </ng-container>
-
                 </div>
             </tr>
         </table>
