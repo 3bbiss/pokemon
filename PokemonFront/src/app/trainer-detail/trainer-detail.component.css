@@ -9,7 +9,6 @@
    /* white-space: nowrap; */
 }
 
-
 /* Trainer Buttons */
 .Tbtns{
    margin-top: 22rem;
@@ -49,7 +48,6 @@
    border-radius: 3px;
 }
 
-
 /* Edit Trainer Inputs */
 .EditTrnInput{
    width: 1rem;
@@ -59,7 +57,6 @@
    justify-content: left;
    font-size: 13px;
 }
-
 
 input[type="text"] {
    font-size:16px;
@@ -73,7 +70,6 @@ input[type="text"] {
  }
  }
  
-
  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
  @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
@@ -82,27 +78,23 @@ input[type="text"] {
     }
  }
  
-
  @media only screen and (max-width: 720px) {
    .inline { 
       display:block;
    }
  }
 
- 
  @media only screen and (max-width: 720px) {
    .qtr {
    width: 100%;
  }
  }
  
-
  @media only screen and (max-width: 720px) {
    .three-qtr {
    width: 100%;
  }
  }
- 
  
  @media only screen and (max-width: 720px) {
    select, input[type=text] { 
