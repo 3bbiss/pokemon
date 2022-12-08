@@ -1,43 +1,16 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
 </head>
 
-<hr/>
-        <h1 class="listHeader">List of Trainers</h1>
-        
-        <div class="card-list">
-            <!-- only keep this section for the add trainer route-->
-            <!--<app-add-trainer (save)="save($event)"></app-add-trainer> -->
-            
-        
-            <!-- <div>
-                <div>
-                    Select A Trainer:
-                    <select #trainerSelect (change)="GetTrainer(trainerSelect.value)">
-                        <option *ngFor="let trainer of trainerList" [value]="trainer.id">{{ trainer.name }}</option>
-                    </select>
-                </div>
-                    <br>
-        
-                    <app-trainer-detail
-                    [trainer]="this.trainer" (delete)="deleteOne($event)"
-                    (save)="saveEdit($event)"
-                    ></app-trainer-detail>
-        
-            </div> -->
-        
-            <div *ngFor="let trainer of trainerList" class="card">
-                    <app-trainer-detail 
-                    [trainer]="trainer" (delete)="deleteOne($event)"
-                    (save)="saveEdit($event)"
-                    ></app-trainer-detail>
-        
-            </div>
-        
-        </div>
+<hr />
+<h1 class="listHeader">List of Trainers</h1>
 
-
-
-
+<div class="card-list">
+    <div *ngFor="let trainer of trainerList" class="card">
+        <app-trainer-detail [trainer]="trainer" (delete)="deleteOne($event)" (save)="saveEdit($event)">
+        </app-trainer-detail>
+    </div>
+</div>

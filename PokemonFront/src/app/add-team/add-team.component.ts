@@ -15,25 +15,25 @@ import { TrainerService } from '../trainer.service';
   styleUrls: ['./add-team.component.css']
 })
 export class AddTeamComponent implements OnInit {
-  
+
   newTeam: Team = {
     team_id: 0, team_name: '', trainer_id: 0,
     trainer_name: '', pokemon: []
   }
 
-  trainerList: Trainer[] = []; 
+  trainerList: Trainer[] = [];
   pokemonList: Pokemon[] = [];
 
-  firstPokemon: Pokemon|undefined;
-  secondPokemon: Pokemon|undefined;
-  thirdPokemon: Pokemon|undefined;
-  fourthPokemon: Pokemon|undefined;
-  fifthPokemon: Pokemon|undefined;
-  sixthPokemon: Pokemon|undefined;
-  
-  @Output() save:EventEmitter<Team> = new EventEmitter<Team>();
+  firstPokemon: Pokemon | undefined;
+  secondPokemon: Pokemon | undefined;
+  thirdPokemon: Pokemon | undefined;
+  fourthPokemon: Pokemon | undefined;
+  fifthPokemon: Pokemon | undefined;
+  sixthPokemon: Pokemon | undefined;
 
-  constructor(private TrainerSrv: TrainerService, private PokemonSrv: PokemonService, private TeamSrv: TeamService) { 
+  @Output() save: EventEmitter<Team> = new EventEmitter<Team>();
+
+  constructor(private TrainerSrv: TrainerService, private PokemonSrv: PokemonService, private TeamSrv: TeamService) {
     TrainerSrv.getAllTrainers(
       (result: Trainer[]) => {
         this.trainerList = result;
@@ -41,7 +41,7 @@ export class AddTeamComponent implements OnInit {
     );
 
     PokemonSrv.getAllPokemon(
-      (result: Pokemon[]) =>{
+      (result: Pokemon[]) => {
         this.pokemonList = result;
       }
     );
@@ -50,14 +50,14 @@ export class AddTeamComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  saveTeam(team: Team){
+  saveTeam(team: Team) {
     this.TeamSrv.addTeam(
-      (result: Team) => {},
+      (result: Team) => { },
       team
     );
   }
 
-  saveIt(){
+  saveIt() {
     if (this.firstPokemon) {
       this.newTeam.pokemon.push(<TrainerPokemon>{ pokemon_id: this.firstPokemon?.id ?? 0 });
     }
